@@ -1,0 +1,142 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+
+    <style>
+        body {
+            font-family: sans-serif;
+        }
+        label {
+            cursor: pointer;
+            
+        }
+    </style>
+</head>
+
+<body>
+
+    <form action="#" method="get" target="_blank" autocomplete="off"> <!--form action = para onde vai o formulario / target so para ver se o formulario foi enviado e autocomplete para nao ficar aparecendo sujestao do que ja digitou-->
+        <p>O meu formulario</p>
+        <p> <!--input para nomes-->
+            <label for="nome">Nome:</label> <!--clicar no label joga direto no input e fica mais facil puxar no CSS depois-->
+            <input type="text" id="nome" name="nome" placeholder="Seu Nome" required>
+            <!--name e para atributo no bank end/ placeholder e para da ex dentro do input / required significa que o campo e obrigatorio-->
+        </p>
+
+        <p><!--input para checkbox-->
+            <label for="dev">Sou um dev Junior</label> 
+            <input type="checkbox" name="dev" id="dev" value="sim"> <br>
+            <label for="dev">Sou um dev Pleno </label> 
+            <input type="checkbox" name="dev" id="dev" value="sim"><br>
+            <label for="dev">Sou um dev Senior</label> 
+            <input type="checkbox" name="dev" id="dev" value="sim">
+        </p>
+
+        <p>
+            Gênero: <br> <!--input para selecionar bolinhas-->
+            <label for="femino">Feminino</label> 
+            <input type="radio" name="genero" id="feminino" value="feminino"> <br>
+            <label for="masculino">Masculino</label> 
+            <input type="radio" name="genero" id="masculino" value="masculino"><br>
+            <label for="outros"> Outros</label> 
+            <input type="radio" name="genero" id="outros" value="outros">
+        </p>
+
+        <p><!--input para datas-->
+            <label for="">Data de Nascimento: </label> 
+            <input type="date" id="date" name="date" value="2020-04-20">
+        <p>
+
+        <p><!--input para datas e horas-->
+            <label for="">Data de Nascimento: </label> 
+            <input type="datetime-local" id="datetime" name="datetime" value="2020-04-20T20:00">
+        <p>
+        
+        <p><!--input para hora-->
+            <label for="">Hora: </label> 
+            <input type="time" id="time" name="time" value="20:00:04">
+        <p>
+
+        <p><!--input para selecionar cor -->
+            <label for="">Cor Preferida: </label> 
+            <input type="color" id="cor" name="cor" value="#FF0000">
+        <p>
+        
+        <p><!--input para colocar emails-->
+            <label for="email">Seu E-mail:</label>
+            <input type="email" name="email" id="email" name="email" placeholder="ex.: email@email.com">
+        </p>
+
+        <p> <!--input para colocar arquivos-->
+            <label for="file">Sua Foto:</label>
+            <input type="file" name="file" id="file" accept="png" multiple>
+            <!-- accept para definir o tipo de arquivo que aceita, multiple para aceitar mais que um arquivo-->
+        </p>
+
+        <p><!--input para numeros-->
+            <label for="number">Number</label>
+            <input type="number" name="number" id="number" placeholder="Digite um nùmero" min="10" max="50" step="5">
+            <!--min é o minimo de numeros permitidos; max o maximo e o step fala de quantos em quantos o numero vai pulando-->
+        </p>
+
+        <p> <!--input para selecionar uma senha-->
+            <label for="password">Sua Senha:</label>
+            <input type="password" name="password" id="password" placeholder="Digite sua senha">
+        </p>
+
+        <p>
+            <label for="range">Range</label>
+            <input type="range" name="range" id="range" list="tickmarks">
+
+            <datalist id="tickmarks">
+                <option value="0" label="0%">
+                <option value="10" >
+                <option value="20" >
+                <option value="30" >
+                <option value="40" >
+                <option value="50" label="50%">
+                <option value="60" >
+                <option value="70" >
+                <option value="80" >
+                <option value="90" >
+                <option value="100" label="100%">
+                </option>
+            </datalist>
+        </p>
+
+        <p><!--input para selecionar um link-->
+            <label for="url">Sua URL:</label>
+            <input type="url" name="url" id="url" placeholder="URL">
+        </p>
+
+        <p>
+            <label for="select">Selecione alguma opção:</label>
+            <select name="select" id="select">
+                <option value="10">10</option>
+                <option value="20">20</option>
+                <option value="30" label="30"></option>
+                <option value="40" label="40"></option> <!--label o que vao aparecer para usuario-->
+                <!--multiple para selecionar varias e optgroup para fazer grupos dentro da seleção-->
+            </select>
+        </p>
+
+        <p>
+            <label for="textarea">textarea</label> <br>
+            <textarea name="textarea" id="textarea" cols="30" rows="10" placeholder="Deixe sua Opinião"></textarea> 
+            <!--cals sao colunas e rows sao linhas-->
+        </p>
+
+        <p> <!--input para botão-->
+            <button type="submit">Enviar</button> <!--Submit significa que e o botão de enviar-->
+            <button type="reset">Reset</button> <!--Reset significa que e o botão de resetar o formulario-->
+        </p>
+
+
+    </form>
+
+</body>
+</html>

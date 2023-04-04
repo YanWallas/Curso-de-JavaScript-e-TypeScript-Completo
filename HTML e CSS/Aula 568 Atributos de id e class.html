@@ -1,0 +1,42 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Meu HTML</title>
+
+    <style> /*CSS*/
+        h1 {background: red; /* background = fundo do texto ou pagina*/}
+
+        p {background: blue;}
+
+        #cabecalho-dois{ /*selecionando apenas o id especifico*/
+            background: purple;
+        }
+
+        .fundo-vermelho{/*selecionando apenas as classes especificas (nao sobressai o id*/
+            background: red ; /*!important força o navegador dizendo que essa parte e importante e sobressai o id*/
+        }
+
+        .bold {/*selecinando a classe para rosa*/
+            color: rgb(233, 107, 128);
+        }
+    
+    </style>
+
+</head>
+
+<body>
+    <h1 id="cabecalho-um" class="fundo-vermelho"> <!--id=indentificador que nao se repete; class=classe que pode se repetir-->
+        Vai vir aqui
+    </h1>
+    
+    <h1 id="cabecalho-dois" class="fundo-vermelho">
+        Vai vir aqui
+    </h1>
+
+    <p>Um texto <b class="bold">qualquer</b></p> <!--<b> </b> deixa a fonte em negrito-->
+
+</body>
+</html>

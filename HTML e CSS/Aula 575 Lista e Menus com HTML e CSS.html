@@ -1,0 +1,82 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+
+    <style>
+        *{
+            margin: 0;
+            padding: 0;
+        }
+    
+        nav { 
+            
+            background: red;
+           
+        }
+
+        nav a { /*endereço para CSS no Link a da lista*/
+            color: blue;
+            text-decoration: none;
+            font-family: system-ui, -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, 'Open Sans', 'Helvetica Neue', sans-serif;
+            padding: 10px 20px;
+            display: block; /* criar um bloco*/
+            text-transform: uppercase; /* deixar todas as Letras Maiusculas*/
+        }
+
+        nav a:hover { /* hover e um evento onde o mouser passa por cima do item selecionado*/
+            background: rgba(0, 0, 0, 0.3);
+
+        }
+
+        nav {
+            display: flex;
+            /*justify-content: center; alinhar no centro lateral*/
+            align-items: center;/*alinhar no centro altura(teto/chão)*/    
+        }
+
+        nav ul {
+            display: flex;/* Deixa a lista na horizontal*/ 
+            list-style: none; /*Tirar bolinha que fica antes da lista ordenada*/
+            margin-left: 10px;
+        }
+
+    </style>
+
+    
+
+</head>
+<body>
+    <nav>
+        <ul>
+            <li><a href="#">Home</a></li>
+            <li><a href="#">About</a></li>
+            <li><a href="#">Products</a></li>
+        </ul>
+
+    </nav>
+    <ul> <!--Para fazer Lista Nao Ordenada-->
+        <li>Item 1</li>
+        <li>Item 2</li>
+        <li>Item 3</li>
+    </ul>
+
+    <ol type="1" start="20"> <!--Para fazer Lista Ordenada
+    type para colocar se é numeros, letras ou em romano a lista, e start para selecionar de onde deve começar. -->
+        <li>Item 1</li>
+        <li>Item 2</li>
+        <li>Item 3</li>
+    </ol>
+
+    <dl>
+        <dt>Café</dt> <!-- dl = termo da lista-->
+        <dd>Bebida preta quente</dd> <!--dd = Descrição-->
+        <dt>Café</dt> <!-- dl = termo da lista-->
+        <dd>Bebida preta quente</dd> <!--dd = Descrição-->
+    </dl>
+    
+</body>
+</html>

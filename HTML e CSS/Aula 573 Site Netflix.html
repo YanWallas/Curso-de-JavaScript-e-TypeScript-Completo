@@ -1,0 +1,68 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Netflix</title>
+
+    <style>
+        * {
+            margin: 0; /* tirando marquem de todo documento CSS*/
+            padding: 0;
+        }
+
+        body {
+            background-image: url(https://assets.nflxext.com/ffe/siteui/vlv3/e451379a-dd0a-4657-b530-4ca4c0cb2aee/281cb1aa-8ba5-4250-b9ce-d7ddfc5b1083/BR-pt-20230123-popsignuptwoweeks-perspective_alpha_website_small.jpg);
+            background-size: cover; /* centralizar imagem no tamanho da pagina*/
+            background-position: top center; /* centralizar imagem em cima e centro da pagina*/
+        }
+
+        #heading {
+           background: rgba(0, 0, 0, 0.75);
+           /* background: #e50914;  fundo do heaging*/
+         
+        }
+
+        #heading div {
+            width: 90%;
+            display: flex; /* estilo para tabela*/
+            /*background: #2a09e5;  fundo do heaging*/
+            justify-content: space-between; /* colocar os elementos em cada canto*/
+            margin: 0 auto;
+        }
+
+        #heading .h1 {
+            /*padding-top: 15px;
+            padding-left: 15px;
+            padding-bottom: 15px;
+            uma maneira de fazer*/
+            /*padding: 15px 0 0 50px; metodo mais curto - pegando cima/direita/baixo e dps esquerda. */
+            padding: 15px 0; /* se os 4 lados for  a mesma medida*/
+            font-size: 20px; /* tamanho da fonte*/
+            text-transform: uppercase; /* estilo da fonte*/
+        }
+
+        #heading a {
+            color: #fff;
+            text-decoration: none; /* linha debaixo do nome*/
+        }
+
+
+    </style>
+</head>
+<body>
+    <header id="heading">
+        <div>
+        <h1 class="h1">
+            <a href="#"> Netflix</a>
+        </h1>
+
+        <h2 class="h1">
+            <a href="#"> Entrar</a>
+        </h2>
+    </div>
+    </header>
+    
+</body>
+</html>

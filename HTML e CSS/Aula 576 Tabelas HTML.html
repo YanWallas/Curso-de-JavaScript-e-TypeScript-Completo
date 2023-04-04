@@ -1,0 +1,98 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+
+<style>
+    body {
+        font-family: sans-serif;
+    }
+    table {
+        border-collapse: collapse; /* borda colada*/
+        width: 100%; /* deixando tabela na tela interira*/
+    }
+    table td, table th { /* seleção do titulo e corpo*/
+        border: 1px solid #ccc; /*borda do documento*/
+        padding: 5px;
+        text-align: left;
+    }
+
+    table caption { 
+        caption-side: top; /* se vai ficar em cima ou em baixo*/
+        text-align: left; /* para alinhar na posição*/
+        font-style: italic; /* fonte da letra*/
+        font-size: 15px;
+        margin-bottom: 5px; /* margem de distancia da parte de baixo*/
+    }
+
+    tfoot td { /*selecionando o Rodapé*/
+        background: #ddd;
+    }
+
+    .responsive-table {
+        max-width: 100%; /*deixando o maximo da tela*/
+        overflow-x: auto; /* se passar o tamanho da tela do aparelho, nao vai desconfigurar e pode arrastar pro lado*/
+    }
+
+</style>
+<body>
+    <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. </p>
+<div class="responsive-table"> <!-- div para caso ser em mobile, para nao desalinhar tabela -->
+    <table> <!--Tag para tabela-->
+        <caption>Uma descrição para tabela</caption>
+        <thead>
+            <tr> <!--para linha da tabela-->
+                <th>Titulo 1</th><!--para coluna da tabela-->
+                <th>Titulo 2</th>
+                <th>Titulo 3</th>
+            </tr>
+        </thead>
+
+        <tbody> <!--para criar o corpo da tabela-->
+            <tr> <!--Linhas da tabela-->
+                <td>Corpo 1</td>
+                <td>Corpo 2</td>
+                <td>Corpo 3</td>
+            </tr>
+            <tr>
+                <td colspan="2">Ocupando 2 tabelas</td> <!--pode colocar ocupando 3 ou quantidade necessaria-->
+                <td>Corpo 3</td>
+            
+            </tr>
+            <tr>
+                <td rowspan="2">Ocupando 2 Linhas</td>
+                <td>Corpo 2</td>
+                <td>Corpo 3</td>
+            </tr>
+            <tr>
+                <td>Corpo 2</td>
+                <td>Corpo 3</td>
+            </tr>
+            <tr>
+                <td>Corpo 1</td>
+                <td>Corpo 2</td>
+                <td>Corpo 3</td>
+            </tr>
+        </tbody>
+
+        <tfoot> <!--rodapé da tabela-->
+            <tr><!--linha do rodapé-->
+                <td colspan="2" rowspan="2"></td>
+             <!-- <td>Rodapé 2</td> tirei o rodapé 2 para alinhar tabela por causa do rowspan e colspan-->
+                <td rowspan="2">Total: 555</td>
+            </tr>
+            <tr><!--linha do rodapé-->
+                <!--<td>Rodapé 1</td>
+                <td>Rodapé 2</td> 
+                <td>Rodapé 3</td>Tambem prescisei tirar-->
+            </tr>
+        </tfoot>
+
+    </table>
+</div>
+</body>
+</html>
