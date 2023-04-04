@@ -1,5 +1,26 @@
-.caixa{
-    background: red;
-    height: 120px;
-    width: 120px;
+* { /* Seleciono todas os elementos*/
+    margin: 0;
+    padding: 0;/* deixa maggin e padding tudo 0 para nao ter margem*/
+}
+
+h1 { /* seleciono todas as tag h1 que tiver no HTML*/
+    color: rgb(43, 226, 141);
+}
+
+p {
+    color: red;
+}
+
+body div section p,
+body div section h1 { /*faço um caminho de seleção para tag especifica que estou querendo, ex. estou selecionando apenas o paragrafo e o titulo que esta dentro de section*/
+    color: blue;
+}
+
+.heading { /* selecionando class*/
+    color: rgb(204, 0, 255);
+}
+
+h2.heading { /* selecionando apenas a class heading que tem h2*/
+    font-style: italic; /* fonte da letra*/
+    color: yellow;
 }
