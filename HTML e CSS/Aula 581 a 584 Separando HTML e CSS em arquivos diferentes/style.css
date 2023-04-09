@@ -24,3 +24,29 @@ h2.heading { /* selecionando apenas a class heading que tem h2*/
     font-style: italic; /* fonte da letra*/
     color: yellow;
 }
+
+div {
+    color: initial;
+    margin-left: 20px;
+}
+
+.pai  .filha {
+    color: red;
+}
+
+.paii h1+p{
+    color: aqua;
+ }
+
+ .paii p+h1{
+    color: rgb(17, 0, 255);
+ }
+
+ .paii h1~p { /* sinal ~ siginifica todos os P depois de um h1*/
+    color: bisque;
+ }
+
+ [meu-atributo="valor"] {
+    color: rgb(4, 0, 7);
+    font-style: italic;
+ }
