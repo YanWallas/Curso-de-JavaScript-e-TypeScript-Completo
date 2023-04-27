@@ -56,6 +56,14 @@ input:checked + p { /* Quando o input estiver marcado o paragrafo proximo sera s
     background: red;
 }
 
-.pai .lista li {
+.pai .lista li {/* selecionando classe lista dentro da classe pai*/
     background: red;
 }
+
+/*.pai .lista li:first-child {/* selecionando apenas o primeiro filho da classe lista dentro da classe pai...
+    background: red;
+}*/
+
+/*.pai .lista li:last-child {/* selecionando apenas o ultimo filho da classe lista dentro da classe pai...
+    background: red;
+}*/
