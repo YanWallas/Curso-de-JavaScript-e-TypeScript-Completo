@@ -1,0 +1,27 @@
+p:not(.meio) { /* seleciona todos os P, menos os da classe meio*/
+    color: blue;
+}
+
+input:not(:checked) + p { /* Quando o input nao estiver marcado, o paragrafo a seguir sera selecionado*/
+    background: yellow;
+}
+
+/*ul li:nth-child(2) { /* Seleciona apenas o item do numero correspondente... so Funciona para tags irmãs...
+    background-color: rebeccapurple;
+} */
+
+ul li:nth-child(even) { /* Seleciona apenas o item de numero par - para numeros impares troca (even) por (odd) */
+    background-color: red;
+}
+
+ul li:nth-child(odd) { /* Seleciona apenas o item de numero impar*/
+    background-color: rgb(0, 255, 0);
+}
+
+ul li:nth-child(3n) { /* 3n Seleciona o item pulando 3 em 3 - 4n pula de 4 em 4 - assim por diante*/
+    background-color: rgb(255, 0, 179);
+}
+
+ul li:nth-child(3n+4) { /* depois do 4 item, Seleciona o item pulando 3 em 3 */
+    background-color: rgb(68, 0, 255);
+}
