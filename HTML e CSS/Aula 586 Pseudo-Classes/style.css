@@ -1,0 +1,61 @@
+.heading {
+    transition: all 300ms ease-in-out; /* transcição para mudar todos os fundos da classe heading*/
+}
+
+.heading:hover { /* dois pontos e hover (quando mouse passar por cima */
+    background: red;
+}
+
+a { /* selecionar todos os links*/
+    color:  darkgoldenrod;
+}
+
+a:link { /* selecionar links nao visitados*/
+    color: rgb(241, 18, 212);
+}
+
+a:visited { /* selecionar links ja visitados*/
+    color: firebrick
+}
+
+a:hover { /* Quando o mouse passar por cima do link*/
+    background: darkslateblue;
+    color: white; 
+    text-decoration: none; /* tirar a linha de baixo do nome*/
+}
+
+a:active { /* quando o link e ativado (clicando)*/ 
+    background: darkred;
+    color: white;
+    text-decoration: none;
+}
+
+input:focus { /* seleciona input que tem focando*/
+    box-shadow: 0 0 5px rgb(241, 18, 212); /* sombra*/
+    outline: none;
+    border: 1px solid black;
+
+}
+
+input:disabled { /* seleciona input que esta desabilitado*/
+    background: rgb(92, 53, 53);
+    cursor: not-allowed; /* Cursor vira simbolo de nao permitido*/
+}
+
+input:enabled { /* seleciona input que esta habilitado*/
+    background: rgb(158, 204, 157);
+    
+}
+
+input:checked { /* Quando o input estiver marcado*/
+    width: 50px;
+    height: 50px;
+}
+
+input:checked + p { /* Quando o input estiver marcado o paragrafo proximo sera selecionado*/
+    background: red;
+}
+
+.pai .lista li {
+    background: red;
+}
