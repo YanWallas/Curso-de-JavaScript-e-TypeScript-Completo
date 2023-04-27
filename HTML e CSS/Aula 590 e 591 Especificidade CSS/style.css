@@ -1,0 +1,23 @@
+/*
+ID Classes, Atributos e pseudo-Clases  Elementos e pseudo-elementos  
+*/
+
+/*
+especificidade
+ empate
+ style
+ !impotant
+*/
+
+#p {
+    background: red;
+}
+
+.p {
+    background: yellow !important;
+}
+
+p { 
+    font-size: initial; /* initial nao deixa herda a seleção*/
+    color: inherit;/* inherit deixa herda a seleção*/
+}
