@@ -1,0 +1,34 @@
+ul li::after { /* pode colocar before tambem e com apenas um . tbm */
+    content: ' - ';
+    background: red;
+    color: white;
+    display: block;
+
+}
+p {
+    font-size: 24px;
+}
+
+p::first-letter { /* Mexendo Apenas na primeira letra*/
+    font-size: 150px;
+    display: block;
+    float: left;
+    margin:  0 10px 10px 0;
+}
+
+p::first-line { /* Mexendo Apenas na primeira linha*/
+    background: red;
+}
+
+P::selection {/* Mexendo Apenas no que eu selecionar do paragrafo*/
+    background: black;
+    color: white;
+}
+
+::placeholder { /* mexendo dentro do input*/
+    color: red;
+}
+
+.form::placeholder { /* mexendo dentro do input que tem a classe form*/ 
+    color: rgb(0, 255, 149);
+}
