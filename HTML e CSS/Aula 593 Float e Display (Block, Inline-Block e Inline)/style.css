@@ -1,0 +1,27 @@
+* {
+    margin: 0;
+    padding: 0;
+}
+
+.grid::after{ /* criei um elemento na grid, para limpar as laterais da classe grid*/
+    content: '';
+    display: block;
+    clear: both;
+}
+
+.grid .col {
+    width: 33.33%;
+    height: 300px;
+    float: left; /* flutua a dev para esquerda*/
+}
+
+.grid .col-content {
+    width: 100%;
+    height: 100%;
+    background: red;
+}
+
+p {
+    clear: both; /*vai limpar dos dois lados */
+    /*clear: left;  No paragrafo, vai limpar tudo que tem a esquerda*/
+}
