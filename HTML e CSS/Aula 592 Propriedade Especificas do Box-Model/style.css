@@ -1,0 +1,26 @@
+/* html, body { ---- vai deixa o conteudo do body 100% do tamanho da tela----
+    height: 100%;
+} */
+
+.texto {
+    box-sizing: border-box; /* padding, border border serão somado ao conteudo(MAIS UTILIZADO)*/
+    /*box-sizing: content-box; margin, padding, border serão somado ao conteudo*/
+    /* box-sizing: padding-box; padding serão somado ao conteudo*/
+    background: red;
+    width: 100%;
+    height: 100%;
+    max-width: 600px; /* o maximo de largura que a div chega, msm com tela maior*/
+    max-height: 500px;/* o maximo de altura que a div chega, msm com tela maior*/
+    min-width: 0; /* o minimo de largura que a div chega, msm com tela maior*/
+    min-height: 0;/* o minimo de altura que a div chega, msm com tela maior*/
+    /* overflow: hidden; --- deixa o texto de dentro da dive escondido, mas nao ultapassa a div */
+    /* overflow-y: scroll;  faz uma pagina de rolagem dentro da div, se o texto e maior*/
+    overflow: auto; /* coloca rolagem aoenas se o conteudo passar da div*/
+    margin: 5px auto; /* colocar o elemento no centro da tela*/
+    padding: 10px; /* espaçamento entre conteudo e a div*/
+    /*padding: 10px 5px 15px 5px;
+    padding: topo direita baixo esquerda;
+    padding: 10px 5px
+    padding: cima/baixo  diteita/esquerda */
+    border: 5px solid black; /* borda da div (solid e o estilo da borda */
+}
