@@ -1,0 +1,9 @@
+p {
+    color: red; /* Cor da Fonte*/
+    background-color: yellow; /*Cor de fundo da Fonte*/
+    font-size: 20px; /*Tamanho da fonte*/
+    font-style: italic; /*Estilo da fonte */
+    font-weight: bold; /*Fonte em Negrito*/
+    direction: ltr; /*Direção do texto*/
+    letter-spacing: 5px; /*Espaçameto entre as letras*/
+}
