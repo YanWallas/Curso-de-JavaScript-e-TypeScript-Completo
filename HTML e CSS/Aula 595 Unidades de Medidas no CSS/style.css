@@ -1,0 +1,33 @@
+html {
+    font-size: 62.5%;
+    scroll-behavior: smooth; /* no Link direto do id, faz a rolagem da pagina mais suavel*/
+}
+* {
+    margin: 0;
+    padding: 0;
+}
+
+.pai {
+    width: 50rem; /* 500px*/
+    height: 100vh; /* vh deixa na procentagem da altura da pagina, estilo px*/
+    background: yellow;
+    overflow: hidden;
+}
+
+.pai > div {
+    width: 50%;
+    height: 50rem;
+    background: blue;
+}
+
+p {
+    font-size: 1.6rem;
+}
+
+.color1 {
+    background: turquoise;
+}
+
+.color2 {
+    background: violet;
+}
