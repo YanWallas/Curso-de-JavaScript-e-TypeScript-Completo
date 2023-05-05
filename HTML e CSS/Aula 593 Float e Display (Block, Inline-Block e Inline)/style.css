@@ -1,8 +1,12 @@
 * {
     margin: 0;
     padding: 0;
+    box-sizing: border-box;
 }
 
+.grid {
+    padding: 15px;
+}
 .grid::after{ /* criei um elemento na grid, para limpar as laterais da classe grid*/
     content: '';
     display: block;
@@ -10,9 +14,11 @@
 }
 
 .grid .col {
+    box-sizing: border-box;
     width: 33.33%;
     height: 300px;
-    float: left; /* flutua a dev para esquerda*/
+    float: left; /* flutua a div para esquerda*/
+    padding: 15px;
 }
 
 .grid .col-content {
