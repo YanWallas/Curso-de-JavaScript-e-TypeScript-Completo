@@ -1,9 +1,17 @@
 p {
-    color: red; /* Cor da Fonte*/
+    color: rgb(0, 0, 0); /* Cor da Fonte*/
     background-color: yellow; /*Cor de fundo da Fonte*/
     font-size: 20px; /*Tamanho da fonte*/
     font-style: italic; /*Estilo da fonte */
     font-weight: bold; /*Fonte em Negrito*/
     direction: ltr; /*Direção do texto*/
-    letter-spacing: 5px; /*Espaçameto entre as letras*/
+    word-spacing: 5px; /*Espaçamento das palavras*/
+    line-height: 25px; /* Altura da Linha*/
+    text-align: center; /*Alinha o texto*/
+    /* text-decoration: line-through; ---- Texto riscado*/
+    text-decoration: underline; /*Linha de baixo do texto*/
+    text-indent: 50px; /* Espaçamento nos paragrafos*/
+    text-shadow: 1px 1px 1px red; /* joga o texto de lado e faz sombras*/
+    text-transform: capitalize; /*Deixa o texto com a primeira letra  de cada palavra maiuscula*/
+
 }
