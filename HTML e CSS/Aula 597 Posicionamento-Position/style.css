@@ -1,0 +1,26 @@
+* {
+    margin: 0;
+}
+
+.pai {
+
+}
+
+.filha1, .filha2 {
+    width: 300px;
+    height: 300px;
+    background: red;
+    margin: 10px;
+    position: static; /*Posição estatica, nao muda*/
+}
+
+.filha2 {
+    background: greenyellow;
+}
+
+.filha1 {
+    position: relative; /*Posição relativo*/
+    position: absolute; /*Posição absoluta, por cima de outro elemento*/
+    top: 50px; /*Em relação ao topo*/
+    left: 50px;/*distancia da esquerda*/
+}
