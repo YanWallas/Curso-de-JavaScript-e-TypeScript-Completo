@@ -1,0 +1,121 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+html {
+    scroll-behavior: smooth; /* Vai rolar a pagina quando clicar no menu*/
+}
+
+body {
+    font-family: sans-serif;
+}
+
+.grid {
+    padding: 15px;
+    max-width: 1200px;
+    margin: 0 auto; /*Vai ficar no meio*/
+    padding-top: 73px; /*Elemento vai ficar a baixo do menu que tem 58px*/ 
+}
+
+.grid::after{ /* criei um elemento na grid, para limpar as laterais da classe grid*/
+    content: '';
+    display: block;
+    clear: both;
+}
+
+.grid .col {
+    box-sizing: border-box;
+    width: 33.33%;
+    height: 300px;
+    float: left; /* flutua a div para esquerda*/
+    padding: 15px;
+}
+
+.grid .col-content {
+    width: 100%;
+    height: 100%;
+    background: red;
+}
+
+p {
+    clear: both; /*vai limpar dos dois lados */
+    /*clear: left;  No paragrafo, vai limpar tudo que tem a esquerda*/
+}
+
+.menu {
+    width: 100%; /*menu preenchendo toda a lateral*/
+    position: fixed; /*Posição Fixada*/
+    background: black; /*Cor de Fundo black */
+}
+
+.menu ul {
+    list-style: none; /*Tirar as bolinhas antes do link*/
+    display: block; /*Vai ser um Bloco*/
+    max-width: 1200px; /*Largura Maxima*/
+    padding: 0 30px; 
+    margin: 0 auto;
+}
+
+.menu li {
+    float:left; /* jogando menu para esquerda*/
+    
+}
+
+.menu li a {
+    display: block;
+    color: white;
+    padding: 20px;
+    text-decoration: none; /*Tirar a linha de baixo da palavra*/  
+    transition: all 300ms ease-in-out; /*Eveito no botão*/
+}
+
+.menu ul li a:hover {
+    background: #333;
+}
+
+.full-page {
+    max-width: 100%;
+    padding-top: 73px;
+    height: 100vh;
+    background: turquoise;
+}
+
+.full-page-content {
+    max-width: 1200px;
+    padding: 0 30px;
+    margin: 0 auto;
+}
+
+
+
+
+@media (max-width: 568px) { /*Telas mobile a baixo de 320px, tera essa configuração na class escolhida*/
+    .grid .col {
+        width: 100%;
+    }
+}
+
+@media (min-width: 569px) and (max-width: 768px) { /*Entre 321px e 768px, tera 2 colunas, a mais volta configuração normal*/
+    .grid .col {
+        width: 50%;
+    }
+}
+
+@media (min-width: 769px) and (max-width: 1200px) {
+    .grid .col {
+        width: 33.33%;
+    }
+}
+
+@media (min-width: 769px) and (max-width: 1200px) {
+    .grid .col {
+        width: 33.33%;
+    }
+}
+@media (min-width: 1201px) {
+    .grid .col {
+        width: 25%;
+    }
+}
