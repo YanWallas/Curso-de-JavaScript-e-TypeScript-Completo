@@ -89,33 +89,21 @@ p {
 }
 
 
-
-
 @media (max-width: 568px) { /*Telas mobile a baixo de 320px, tera essa configuração na class escolhida*/
-    .grid .col {
-        width: 100%;
-    }
+    .grid .col {width: 100%;}
 }
 
 @media (min-width: 569px) and (max-width: 768px) { /*Entre 321px e 768px, tera 2 colunas, a mais volta configuração normal*/
-    .grid .col {
-        width: 50%;
-    }
+    .grid .col {width: 50%;}
 }
 
 @media (min-width: 769px) and (max-width: 1200px) {
-    .grid .col {
-        width: 33.33%;
-    }
+    .grid .col {width: 33.33%;}
 }
 
 @media (min-width: 769px) and (max-width: 1200px) {
-    .grid .col {
-        width: 33.33%;
-    }
+    .grid .col {width: 33.33%;}
 }
 @media (min-width: 1201px) {
-    .grid .col {
-        width: 25%;
-    }
+    .grid .col { width: 25%;}
 }
