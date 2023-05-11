@@ -3,10 +3,11 @@
 }
 
 .pai {
+    height: 300vh;
 
 }
 
-.filha1, .filha2 {
+.filha1, .filha2, .filha3, .filha4 {
     width: 300px;
     height: 300px;
     background: red;
@@ -15,12 +16,62 @@
 }
 
 .filha2 {
+    position: absolute;
     background: greenyellow;
+    right: 20px;
+    z-index: 2; /*faz o elemente ficar por cima do outro, quem tiver maior numero fica por cima... os dois elementos tem que estar no mesmo estilo de camadas*/
 }
 
 .filha1 {
-    position: relative; /*Posição relativo*/
+    /*position: relative; Posição relativo*/
     position: absolute; /*Posição absoluta, por cima de outro elemento*/
-    top: 50px; /*Em relação ao topo*/
-    left: 50px;/*distancia da esquerda*/
+    /*top: 50px; Em relação ao topo*/
+    /*left: 50px;distancia da esquerda*/
+    top: 50%;
+    margin-top: -150px; /*Tirando 150px dos 300px do documento, para ficar no centro da pagina*/
+    left: 50%;
+    margin-left: -150px;
+    z-index: 1;
+}
+
+.filha3 {
+    background: blue;
+    position: relative;
+    top: 100px;
+    left: 100px;
+}
+
+.outra {
+    position: absolute;
+    font-size: 50px;
+    background: white;
+}
+
+.filha4 {
+    position: fixed; /*Fixo na posição que for colocado*/
+    background: rgb(255, 47, 220);
+    top: 30%;
+    right: 0;
+    z-index: 3;
+}
+
+.outra1 {
+    position: absolute;
+    font-size: 50px;
+    background: white;
+}
+
+.pai2 {
+    top: 100px;
+}
+
+ul {
+    height: 100px;
+    overflow-y: auto;
+}
+
+ul li.sticky {
+    position: sticky;/*Deixa o sticky marcado ate encontrar outro*/
+    background: gray;
+    top: 0;
 }
