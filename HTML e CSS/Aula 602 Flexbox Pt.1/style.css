@@ -14,10 +14,10 @@
     flex-end = alinhamento a direita; 
     center = alinhamento no centro;
     space-around = Alinhando com espaço em volta do elemento;
-    space-between =  espaço distribuido igual para todos elementos, elemento na esquerda;
+    space-between =  espaço distribuido igual/entre para todos elementos, elemento na esquerda;
     space-evenly = distribuir espaço igual para todos, elementos no centro */
 
-    align-items: stretch; /* aliamento no eixo perpenticular*/ 
+    align-items: flex-start; /* aliamento no eixo perpenticular*/ 
     /*flex-start = Os elementos ficam no top; 
     center = no centro(meio);
     flex-end = alinhamento na parte de baixo; 
@@ -25,10 +25,14 @@
     stretch = alinhamento esticado no espaçamento inteiro; */
 
     /* gap: 30px; espaçamento entre os elementos flex-item*/
+    
+    align-content: center; /*pega o conteudo e alinha*/
+
+    flex-wrap: wrap; /* faz a quebra de linha*/
 }
 
 .flex-item { 
-    width: 100%;
+    width: 33.33%;
     background: red;
     margin: 10px;
 }
