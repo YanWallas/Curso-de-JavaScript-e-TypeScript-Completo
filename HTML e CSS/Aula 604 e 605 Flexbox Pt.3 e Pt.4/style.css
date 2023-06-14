@@ -8,25 +8,9 @@
     background: yellow;
     height: 500px;
     display: -inline-flex; /* flex (flexivel)*/
-    flex-direction: row; /* Direção do eixo principal do meu flex, row horinzontal e no column fica vertical */
-    justify-content: space-between; /* Alinhamento do eixo principal, eixo principal muda de acordo com flex-direction*/
-    /* flex-start = alinhamento a esquerda;
-    flex-end = alinhamento a direita; 
-    center = alinhamento no centro;
-    space-around = Alinhando com espaço em volta do elemento;
-    space-between =  espaço distribuido igual/entre para todos elementos, elemento na esquerda;
-    space-evenly = distribuir espaço igual para todos, elementos no centro */
-
-    align-items: center; /* aliamento no eixo perpenticular*/ 
-    /*flex-start = Os elementos ficam no top; 
-    center = no centro(meio);
-    flex-end = alinhamento na parte de baixo; 
-    baseline = alinhamento pelo fonte; 
-    stretch = alinhamento esticado no espaçamento inteiro; */
-
-    /* gap: 30px; espaçamento entre os elementos flex-item*/
-    
-
+    flex-direction: row;
+    justify-content: space-between; 
+    align-items: center; 
 }
 
 .flex-item { 
