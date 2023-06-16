@@ -1,0 +1,59 @@
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    font: sans-serif;
+    font-size: 40px;
+}
+
+.container {
+    max-width: 1200px;
+    margin: 0 auto;
+    overflow-x: hidden; /*vai tirar o overflow*/
+}
+
+.grid {
+    width: calc(100% + 30px); /*gambiarra para nao usar gap(tirar a borda branca no final da pagina do lado direiro*/
+    /*margin-right: -30px;  outra gambiarra para jogar o elemento para direita*/
+    
+    display: grid;
+    grid-template-columns: repeat(auto-fil, minmax(320px, 1fr));
+    /*gap: 30px 80px;  espaçamento linhas colunas*/
+}
+
+.grid div {
+    background: tomato;
+    min-height: 100px; /* altura minima*/
+}
+
+.grid div:nth-child(5) {
+    background: rgb(51, 0, 0);
+    grid-column-start: 1; /* essa grid começa na coluna dois*/
+    grid-column-end: 4; /* Termina na coluna 4 se espichando e direcionando as outras*/
+    grid-row-start: 3; /* o grid 5 vai começar na linha 3*/
+    grid-row-end: 6; /* a grid finaliza na linha 6*/
+}
+
+.grid div:nth-child(9) {
+    background: black;
+    grid-row: span 2; /* minha grid ocupa 2 linhas de espaçamento*/
+    grid-column: span 2; /* minha grid ocupa 2 colunas */
+}
+
+/*@media (max-width: 768px) { - tela ate 768px a grid 5 vai ter 1 coluna
+    .grid div:nth-child(5) {
+        grid-column: span 1;
+    }
+}*/
+
+.grid div:nth-child(15) {
+    background: rgb(255, 0, 170);
+    grid-column-start: um; /* Puxando a grid pelo nome que coloquei la em cima*/
+    grid-column-end: quatro;
+    /*grid-column: um / quatro;  atalho pra começo e fim da coluna*/
+    grid-row: 8 / 10;
+    /*grid-area: 1 / 1 / 4 / 4; atalho - linha começo / coluna começo / linha final / coluna final; */ 
+}
