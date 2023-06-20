@@ -1,0 +1,59 @@
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    font: sans-serif;
+    font-size: 40px;
+}
+
+.container {
+    max-width: 1200px;
+    margin: 0 auto;
+}
+
+.grid {
+    display: grid;
+    grid-template-rows: 150px 1fr auto; /*definindo as linhas*/
+    grid-template-columns: 200px 1fr; /*definindo as colunas*/
+    grid-template-areas: 'header header' 'nav main' 'rodape rodape'; /* vai definir onde vai ficar os elementos dos template a cima. ex.: header header (1 linha, 2 coluna) / nav main (2 linha, 2 coluna) / rodape rodape (3 linha, 2 coluna).*/
+}
+
+.grid div:nth-child(1) {
+    background: red;
+    grid-area: header; /*colocando nome na area*/
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+.grid div:nth-child(2) {
+    background: yellow;
+    grid-area: nav; /*colocando nome na area*/
+}
+
+.grid div:nth-child(3) {
+    background: violet;
+    grid-area: main; /*colocando nome na area*/
+}
+
+.grid div:nth-child(4) {
+    background: turquoise;
+    grid-area: rodape; /*colocando nome na area*/
+}
+
+@media (max-width: 768px) {
+    .grid {
+        display: grid;
+        grid-template-rows: auto;
+        grid-template-columns: auto;
+        grid-template-areas:
+            'header'
+            'nav'
+            'main'
+            'rodape';
+
+    }
+}
