@@ -1,0 +1,70 @@
+:root { /*criação de variaveis*/
+    --primary-color: rgb(54, 22, 159);
+    --white-color: #fff;
+    --gap: 3rem;
+}
+*{
+    margin: 0;
+    padding: 0;
+}
+
+html {
+    font-size: 62.5%;
+}
+
+body {
+    font-family: 'open Sans', sans-serif;
+    font-size: 2rem;
+    color: var(--primary-color);
+   
+}
+
+h1, h2, h3, h4, h5, h6 {
+    font-family: 'Montserrat', sans-serif; /* Estilo da fonte*/
+}
+
+h1 {
+    font-size: 6rem; /*tamanho de cada fonte do titulos*/
+    text-transform: uppercase; /* maiusculo*/
+}
+
+h2 {
+    font-size: 5.5rem;
+}
+
+h3 {
+    font-size: 5rem;
+}
+
+h4 {
+    font-size: 4.5rem;
+}
+
+h5 {
+    font-size: 4rem;
+}
+
+h6 {
+    font-size: 3.5rem;
+}
+
+.main-bg {
+    background-image: url('../img/fundo.svg.svg'); /* img de fundo da svg background*/
+    background-size: cover;
+    background-position: center center;
+    color: var(--white-color);
+}
+
+.main-bg {
+    color: var(--white-color);
+}
+
+.main-content {
+    max-width: 1200px; /*largura maxima*/
+    margin: 0 auto;
+    padding: var(--gap);
+}
+
+.section {
+    min-height: 100vh; /*Altura Minima*/
+}
