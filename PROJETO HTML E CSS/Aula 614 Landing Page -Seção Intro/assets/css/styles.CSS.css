@@ -1,0 +1,131 @@
+:root { /*criação de variaveis*/
+    --primary-color: rgb(54, 22, 159);
+    --white-color: #fff;
+    --light-gray-color: #EEEEEE;
+    --gap: 3rem;
+}
+*{
+    margin: 0;
+    padding: 0;
+}
+
+html {
+    font-size: 62.5%;
+}
+
+body {
+    font-family: 'open Sans', sans-serif;
+    font-size: 2rem;
+    color: var(--primary-color);
+   
+}
+
+h1, h2, h3, h4, h5, h6 {
+    font-family: 'Montserrat', sans-serif; /* Estilo da fonte*/
+}
+
+h1 {
+    font-size: 6rem; /*tamanho de cada fonte do titulos*/
+    text-transform: uppercase; /* maiusculo*/
+}
+
+h2 {
+    font-size: 5.5rem;
+}
+
+h3 {
+    font-size: 5rem;
+}
+
+h4 {
+    font-size: 4.5rem;
+}
+
+h5 {
+    font-size: 4rem;
+}
+
+h6 {
+    font-size: 3.5rem;
+}
+
+a {
+    text-decoration: none;
+}
+
+.main-bg {
+    background-image: url('../img/fundo.svg.svg'); /* img de fundo da svg background*/
+    background-size: cover;
+    background-position: center center;
+    color: var(--white-color);
+}
+
+.main-bg {
+    color: var(--white-color);
+}
+
+.main-content {
+    max-width: 1200px; /*largura maxima*/
+    margin: 0 auto;
+    padding: var(--gap);
+}
+
+.section {
+    min-height: 100vh; /*Altura Minima*/
+}
+
+.menu {
+    background: var(--white-color); /* fundo do menu branco*/
+    position: fixed; /* posição do menu fixado no top*/
+    top: 0; /* colado em cima*/
+    left: 0; /*colado na esquerda*/
+    right: 0; /*colado na direita*/
+    width: 100%; /* 100% de largura da pagina*/
+    border-bottom: 1px solid var(--light-gray-color); /* borda de baixo*/
+}
+
+.menu-content {
+    display: flex; /*conteudo flexivel*/
+    justify-content: space-between; /*eixo do conteudo para horizontal*/
+    align-items: center; /*alinhar elemnto no center*/
+    padding-top: 0;
+    padding-bottom: 0;
+}
+
+.menu h1 {
+    font-size: 2.3rem;
+    color: var(--primary-color);
+}
+
+.menu h1 a {
+    color: inherit;
+}
+
+.menu ul {
+    list-style: none; /* tirar as bolinhas antes da palavra*/
+    display: flex;
+}
+
+.menu ul li a {
+    display: block;
+    padding: 2rem;
+    font-size: 1.8rem;
+    color: var(--primary-color);
+    position: relative;
+}
+
+.menu ul li a::after { /*colocando uma borda no menu, quando vai o mouse em cima*/
+    content: '';
+    position: absolute;
+    bottom: 1rem;
+    left: 50%;
+    width: 0;
+    height: 0.2rem;
+    background: crimson;
+    transition: all 300ms ease-in-out;
+}
+
+.menu ul li a:hover::after {
+    width: 50%;
+    left: 25%;
+}
