@@ -5,6 +5,7 @@
     left: 0; /*colado na esquerda*/
     right: 0; /*colado na direita*/
     width: 100%; /* 100% de largura da pagina*/
+    z-index: 1; /*barra de menu em cima da pagina*/
     border-bottom: 0.1rem solid var(--light-gray-color); /* borda de baixo*/
 }
 
