@@ -1,0 +1,7 @@
+:root { /*criação de variaveis*/
+    --primary-color: rgb(54, 22, 159);
+    --white-color: #fff;
+    --light-gray-color: #EEEEEE;
+    --secondary-color: crimson;
+    --gap: 3rem;
+}
