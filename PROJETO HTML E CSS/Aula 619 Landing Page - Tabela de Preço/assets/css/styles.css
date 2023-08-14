@@ -1,0 +1,85 @@
+.intro-content {
+    position: relative;
+    top: -8rem;
+    display: grid;
+    grid-template-columns: 1fr 1.5fr;
+    gap: var(--gap);
+    min-height: 100vh;
+}
+
+.intro-text, .intro-img {
+    display: flex;
+    flex-flow: column wrap;
+    justify-content: center;
+}
+
+.intro-img  img {
+    max-width: 100%;
+    min-height: auto;
+}
+
+.top3-content {
+    max-width: 64rem;
+    display: flex;
+    /*flex-flow: column wrap;*/
+    flex-direction:column;
+    flex-wrap: nowrap;
+    justify-content: center;
+    min-height:100vh;
+    text-align: center;
+}
+
+.grid-one-content {
+    min-height: 100vh;
+    flex-flow: column wrap;
+    display: flex;
+    justify-content: center;
+}
+
+.grid-main-heading {
+    margin-bottom: 1rem;
+} 
+
+.grid-description{
+    padding-bottom: 5rem;
+}
+
+.grid {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    gap: var(--gap);
+    counter-reset: grid-counter; /*iniciando e criando a contagem */
+}
+
+.grid h3 {
+    font-size: 3rem;
+    position: relative;
+    padding-left: 5rem;
+    padding-bottom: 2rem;
+}
+
+.grid h3::before { /* configurando a contagem*/
+    counter-increment: grid-counter;
+    content: counter(grid-counter);
+    position: absolute;
+    font-size: 8rem;
+    font-style: italic;
+    top: -4rem;
+    left:-2rem;
+    transform: rotate(5deg); /*tranformou o numero e girou ele um pouco*/
+}
+
+.gallery-img {
+    width: 100%;
+    max-width: 36rem;
+    max-height: 36rem;
+    overflow: hidden;
+}
+
+.gallery-img img {
+    transition: all 300ms ease-in-out;
+}
+
+.gallery-img img:hover {
+    transform: translate(-3%, 3%) scale(1.2) rotate(5deg);
+}
