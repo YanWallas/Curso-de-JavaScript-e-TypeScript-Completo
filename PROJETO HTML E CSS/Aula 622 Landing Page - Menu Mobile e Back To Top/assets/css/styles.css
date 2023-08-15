@@ -201,6 +201,7 @@
     .menu {
         bottom: 0;
         display: none;
+        text-align: center;
     }
 
     .menu-content, .menu-content ul {
@@ -240,5 +241,30 @@
 
     .menu-spacing { /* tira o espaço em branco do menu de cima quando a tela esta em mobile*/
         display: none;
+    }
+
+
+    h1 {
+        font-size: 3rem;
+    }
+    
+    h2 {
+        font-size: 3.6rem;
+    }
+    
+    h3 {
+        font-size: 3.4rem;
+    }
+    
+    h4 {
+        font-size: 3.2rem;
+    }
+    
+    h5 {
+        font-size: 3rem;
+    }
+    
+    h6 {
+        font-size: 2.8rem;
     }
 }
