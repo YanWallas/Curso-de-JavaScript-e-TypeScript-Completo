@@ -23,14 +23,18 @@
 </head> 
 
 <body>
+    <input type="checkbox" class="close-menu" id="close-menu" aria-label="close menu"> <!-- criando input para menu no mobile-->
+
+    <label class="close-menu-label" for="close-menu" title="close menu"></label>
+
     <aside class="menu white-bg">
         <div class="main-content menu-content">
-            <h1>
+            <h1 onclick="getElementById('close-menu').checked = false;">
                 <a href="#home">LOGO</a>
             </h1>
 
             <nav>
-                <ul>
+                <ul onclick="getElementById('close-menu').checked = false;">
                     <li><a href="#intro">intro</a></li>
                     <li><a href="#grid-one">grid-one</a></li>
                     <li><a href="#gallery">gallery</a></li>
@@ -203,6 +207,8 @@ s
                         <tr>
                             <td></td>
                             <td></td>
+                            <td></td>
+                            <td></td>
                             <td>Testando</td>
                         </tr>
                     </tfoot>
@@ -253,12 +259,13 @@ s
                 </fieldset>
             </div>
         </div>
-
     </section>
 
     <footer id="footer" class="footer white-bg">
         <p><a rel="nofollow" target="_blank" href="https://github.com/YanWallas">Feito com <span class="heart">❤</span> por Yan no curso de html!!!</a></p>
     </footer>
+
+    <a class="back-to-top" href="#">➤</a>
 
 </body>
 
