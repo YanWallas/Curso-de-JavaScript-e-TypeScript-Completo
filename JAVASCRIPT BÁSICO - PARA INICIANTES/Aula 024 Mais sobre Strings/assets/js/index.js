@@ -31,3 +31,9 @@ console.log(rato.split(' '));//Dividir indice por espaço. podendo escolher onde
 console.log(rato.split(' ', 3));//Mesma de cima, buscando apenas 3 resultado.
 
 console.log(rato.toUpperCase());// Traz a variavel toda em Maiusculo. 
+console.log(rato.toLowerCase());// Traz a variavel toda em minusculo.
+
+console.log(rato.trim());// Remove os espaços em branco da variavel.
+console.log(rato.replace(/\s/g, ''));// Remove os espaços em branco da variavel.
+
+
