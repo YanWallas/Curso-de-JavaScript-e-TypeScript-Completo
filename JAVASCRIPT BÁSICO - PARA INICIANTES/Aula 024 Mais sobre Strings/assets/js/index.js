@@ -10,7 +10,7 @@ console.log(`${umaString} em um lindo dia.`);// outra forma de simplificacr a li
 
 console.log(umaString.indexOf('texto'));// buscando onde começa a palavra 'texto' começa, me trazendo o indice.
 console.log(umaString.indexOf('o',3));// buscando o indice da letra 'o', iniciando pelo indice 3.
-console.log(umaString.lastIndexOf('o',3));// buscando o indice da letra 'o', iniciando pelo indice 3, de traz para frente, ou seja, nao encontrou a letra 'o'.
+console.log(umaString.lastIndexOf('o'));// buscando o indice da letra 'o', de traz para frente, ou seja, a ultima letra 'o'.
 
 console.log(umaString.match(/[a-z]/g)); // traz as letra minusculas.
 console.log(umaString.replace('Um', 'outra')); // Subistitui a palavra Um para a palavra Outra.
@@ -34,6 +34,6 @@ console.log(rato.toUpperCase());// Traz a variavel toda em Maiusculo.
 console.log(rato.toLowerCase());// Traz a variavel toda em minusculo.
 
 console.log(rato.trim());// Remove os espaços em branco da variavel.
-console.log(rato.replace(/\s/g, ''));// Remove os espaços em branco da variavel.
+console.log(rato.replace(/s/g, ''));// Remove os espaços em branco da variavel.
 
 
