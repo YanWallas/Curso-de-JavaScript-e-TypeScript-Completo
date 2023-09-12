@@ -87,7 +87,7 @@ a {
 .menu-content {
     display: flex; /*conteudo flexivel*/
     justify-content: space-between; /*eixo do conteudo para horizontal*/
-    align-items: center; /*alinhar elemnto no center*/
+    align-items: center; /*alinhar elemento no center*/
     padding-top: 0;
     padding-bottom: 0;
 }
