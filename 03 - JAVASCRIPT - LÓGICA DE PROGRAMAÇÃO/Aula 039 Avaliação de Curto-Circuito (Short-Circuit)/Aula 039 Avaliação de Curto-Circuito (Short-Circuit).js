@@ -30,4 +30,14 @@ const corPadrao = corUsuario || 'preto';
 
 console.log(corPadrao);// retorna true(preto), porque o usuario ainda nao definiu uma cor.
 
+corUsuario = 'Vermelho'
+const corPadrao1 = corUsuario || 'preto';
+console.log(corPadrao1);// retorna true(vermelho), porque o usuario definiu uma cor.
 
+const a = 0;
+const b = null;
+const c = 'false';// String 
+const d = false;
+const e = NaN;
+
+console.log(a || b || c || d || e);// vai restorna o false dentro de aspas q e verdadeiro por ser string.
