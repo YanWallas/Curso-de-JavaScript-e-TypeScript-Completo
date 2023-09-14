@@ -25,11 +25,10 @@ form.addEventListener('submit', function (e) {//Criando um evento quando clicar 
 
     const imc = getImc(peso, altura);// puxando a function getImc para dentro dessa const.
     const nivelImc = getNivelImc(imc);// puxando a function getNivelImc para dentro dessa const.
-    
+
     const msg = `Seu IMC é ${imc} (${nivelImc}).`;
 
     setResultado(msg, true);//puxando a functiton para trazer o resultado na tela, true para configurar a cor da mensagem.
-
 });
 
 function getNivelImc (imc) {
@@ -94,6 +93,4 @@ function setResultado (msg, isValid) {// Criando a function para mensagem que se
 
     p.innerHTML = msg; //colocando a msg dentro do p.
     resultado.appendChild(p);//inserindo o P na div resultado.
-
-    
 }
