@@ -6,7 +6,6 @@ const mes = data.getMonth();
 
 function DataAtual(data) {
     const dia = zeroAEsqueda(data.getDate());
-    let mes = zeroAEsqueda(data.getMonth());
     const ano = zeroAEsqueda(data.getFullYear());
     const hora = zeroAEsqueda(data.getHours());
     const min = zeroAEsqueda(data.getMinutes());
