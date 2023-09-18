@@ -94,6 +94,20 @@ function criaData(data) {
 h1.innerHTML = criaData(data);
 */
 
+/* ***************** UMA FORMA DE REDUZIR O COIGO DE CIMA COM ARRAY *****************
+
+function getNomeMes(numeroMes) {
+    const meses = ['janeiro', 'fevereiro', 'março', 'abril', 'maio', 'junho', 'julho', 'agosto', 'setembro', 'outubro', 'novembro', 'dezembro'];
+    return meses[numeroMes]
+}
+
+function getDiaSemanaTexto(diaSemana) {
+    const diasSemana = ['domingo', 'segunda', 'terça', 'quarta', 'quinta', 'sexta', 'sabado'];
+    return diasSemana [diaSemana];
+}
+*************************************************************************************
+*/
+
 // ---> OUTRA FORMA DE FAZER <--- 
 
 const h1 = document.querySelector('.container h1');
@@ -106,3 +120,4 @@ h1.innerHTML = data.toLocaleString('pt-Br', opcoes);
 
 // --> PODENDO TAMBEM RETIRAR O CONST OPCOES E JOGANDO A TAG DIRETA <--
 //h1.innerHTML = data.toLocaleString('pt-Br', {dateStyle: 'full', timeStyle: 'short'});
+
