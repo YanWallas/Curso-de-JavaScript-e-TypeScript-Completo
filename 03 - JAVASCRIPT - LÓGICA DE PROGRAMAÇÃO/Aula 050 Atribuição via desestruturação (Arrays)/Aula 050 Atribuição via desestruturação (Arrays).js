@@ -40,4 +40,6 @@ console.log(numero[1][2]);//bucando no Array 1, o Array 2 que esta dentro do arr
 const [,[,,seis]] = numero;// pegando o numero 6, que esta no indice 2 dentro da array 1, da array global(array de fora que fecha todos).
 console.log(seis);
 
-const [lista, lista2, lista3] = numero; 
+const [lista, lista2, lista3] = numero;// jogando cada array em uma const, assim fica mais tranquilo que buscando o indice de cada array.
+
+console.log(lista);
