@@ -35,9 +35,27 @@ console.log(nome, nome2);
 // Var redeclara as variavel, substitui o valor dela, mesmo dentro de bloco.
 
 
+// function pega variavel de fora, mais variavel definida dentro da function nao pode ser chamada pra fora.
 function falaoi () {
     var nome = 'Luiz';
     console.log(nome);
 }
 
 falaoi();
+
+/*function falaoi () {
+    var sobrenome = 'elaine';
+
+    if (verdadeira) {
+    let nome ='lima';
+    }
+
+    console.log(nome); -> ERRO: nao posso chamar a let por fora do bloco
+}
+
+falaoi();*/
+
+/* **************** OUTRA DIFERENÇA (host) ****************************
+-> Se utilizar a Var antes declarar(declarando dps), vai retorna undefined
+-> Se utilizar Let antes vai retorna erro.
+*/ 
