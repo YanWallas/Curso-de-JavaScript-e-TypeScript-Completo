@@ -21,3 +21,8 @@ console.log(sobrenome, idade);
 
 const { nome: teste } = pessoa;//Buscando a var dentro do objeto e mudando o nome da var dela para teste.
 console.log(teste);
+
+const { endereco: { rua, numero }, endereco } = pessoa;//Buscando no objeto de dentro algo dentro do objeto endereço e depois puxando endereço todo tbm.
+console.log(rua, numero, endereco); 
+
+// resto e igual no array, 3 pontos e o nome da variavel EX:. ...resto.
