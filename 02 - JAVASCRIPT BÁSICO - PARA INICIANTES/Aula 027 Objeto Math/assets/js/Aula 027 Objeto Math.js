@@ -1,3 +1,5 @@
+// -> Math -> tag para numeros matematicos.
+
 let num1 = 9.545778;
 let num2 = Math.floor(num1);// Arredondando num1 para baixo.
 console.log(num2);
