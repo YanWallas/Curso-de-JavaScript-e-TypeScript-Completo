@@ -19,3 +19,25 @@ for (let numero of numeros) {
     }
 
 }
+
+let i = 0;
+while (i < numeros.length) {
+    let numero = numeros[i];
+
+    if (numero ===2) {
+        console.log("pulei o numero 2");
+        continue; // vai chegar a condição true, vai sair a condição e volta depois do 2.(pulando a interação do laço e retorna no proximo (o 2 e nao aparecendo).
+    }
+
+    if (numero === 5) {// pode ser usado tambem || no if de cima.
+        continue;// vai acontecer tambem com o numero 5. pulando ele e indo pro proximo.
+    }
+
+    console.log(numero);
+
+    if (numero === 7) {
+        console.log("7 encontrado, vai parar a contagem aqui");
+        break; // sai do bloco de consições. 
+    }
+
+}
