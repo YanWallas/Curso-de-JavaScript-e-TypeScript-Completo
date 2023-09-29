@@ -1,7 +1,7 @@
 // indice     1234 5678910
 const nome = "Luiz Otávio";
 
-for (let i = 0; i < nome.length; i++) { // esta bbuscando cada indice da variavel, no caso letra por letra.
+for (let i = 0; i < nome.length; i++) { // esta buscando cada indice da variavel, no caso letra por letra.
     console.log(nome[i]);
 }
 
