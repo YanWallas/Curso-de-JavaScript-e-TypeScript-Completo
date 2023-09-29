@@ -8,11 +8,33 @@
 
 //************** MINHA SOLUÇÃO ****************
 
-function resultado(){
+function resultado(num){
+    let valor = num;
+    for (let i = 0; i <= 100; i++) {
 
-    if (isNaN(x)) {
+        if (isNaN(valor)) {
         return "Não e um number"
-    };
+        };
 
-    
+        if (valor % 3 == 0 && valor % 5 == 0) {
+            return "FizzBuzz";
+        };
+
+        if (valor % 3 !== 0 && valor % 5 !== 0) {
+            return valor;
+        };
+
+        if (valor % 5 == 0) {
+            return "Buzz";
+        };
+
+        if (valor % 3 == 0) {
+            return "Fizz";
+        };
+        
+    };   
 }
+
+console.log(resultado(55));
+
+//************** OUTRA SOLUÇÃO **************
