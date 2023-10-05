@@ -133,7 +133,8 @@ conta3('*', 1, 20, 30, 40, 50);
 
 /**********************************************/
 
-const conta4 = (...args) => {
+// SIMPLIFICANDO 0 ARGUMENTS PARA O NOVO ARGS, ACEITA EM QUALQUER FUNCTION DECLARADA.
+const conta4 = (...args) => {// Tem que usar com os ... antes para pegar o resto da função.
     console.log(args);
 };
 conta4('*', 1, 20, 30, 40, 50);
