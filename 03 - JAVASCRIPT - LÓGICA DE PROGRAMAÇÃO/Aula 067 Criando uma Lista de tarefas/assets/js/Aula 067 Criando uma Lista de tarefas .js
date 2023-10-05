@@ -72,7 +72,7 @@ function salvarTarefas() {
 
     for (let tarefa of liTarefas) {
         let tarefaTexto = tarefa.innerText;// let recebe li texto.
-        tarefaTexto = tarefaTexto.replace('Apagar', '').trim();// lete recebe ela subistituindo a string apagar por nada(facil).trim() -> remove espaço dps do array.
+        tarefaTexto = tarefaTexto.replace('Apagar', '').trim();// let recebe ela subistituindo a string apagar por nada(vazio).trim() -> remove espaço dps do array.
         listasTarefas.push(tarefaTexto);
     }
 
