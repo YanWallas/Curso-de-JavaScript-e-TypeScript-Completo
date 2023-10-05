@@ -63,11 +63,11 @@ function pessoa({nome, sobrenome, idade}) {// desestruturação objeto
 }
 pessoa({nome: 'Yan', sobrenome: 'Wallas', idade: 25});
 
-/**********************************************/
-
 // outra maneira e jogando dentro da variavel primeiro
 let obj = {nome: 'Luiz', sobrenome: 'otavio', idade: 29}
 pessoa(obj);
+
+/**********************************************/
 
 function valor([valor1, valor2, valor3]) {// desestruturação array
     console.log(valor1, valor2, valor3);
@@ -113,13 +113,27 @@ const conta1 = function(operador, acmulador, ...numero) {// (...) resto operador
         if (operador === '*') acmulador *= numeros;
     }
     console.log(operador, acmulador, numero);
-}
+};
 conta1('*', 1, 20, 30, 40, 50);
 
 /**********************************************/
 
 const conta2 = function(operador, acmulador, ...numero) {
     console.log(arguments);
-}
+};
 conta2('*', 1, 20, 30, 40, 50);
 
+/**********************************************/
+
+// NÃO TEM ARGUMENTS QUANDO NAO TEM FUNCTION E TEM =>
+const conta3 = (operador, acmulador, ...numero) => {
+    console.log(operador, acmulador, ...numero);
+};
+conta3('*', 1, 20, 30, 40, 50);
+
+/**********************************************/
+
+const conta4 = (...args) => {
+    console.log(args);
+};
+conta4('*', 1, 20, 30, 40, 50);
