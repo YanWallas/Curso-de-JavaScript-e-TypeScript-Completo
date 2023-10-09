@@ -11,6 +11,7 @@ const funcao = retornFuncao();
 console.log(funcao);
 console.dir(funcao);// mesmo coisa que console.log.
 
+/**********************************************/
 
 function retornFuncao1(nome) {
     return function () {
