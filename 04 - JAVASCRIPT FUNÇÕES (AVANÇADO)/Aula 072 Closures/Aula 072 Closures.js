@@ -1,3 +1,5 @@
+//CLOSURES = A HABILIDADE QUE A FUNÇÃO TEM DE ACESSAR SEU ESCOPO LEXICO.
+
 function retornFuncao() {
     const nome = 'Luiz';
     return function () {
@@ -17,6 +19,6 @@ function retornFuncao1(nome) {
 }
 
 const funcao1= retornFuncao1('Luiz');
-const funcao2= retornFuncao1('Jõao');
+const funcao2= retornFuncao1('Jõao'); // Mesma function sendo jogada em outra const com dados diferentes.
 console.dir(funcao1());
 console.dir(funcao2());
