@@ -5,6 +5,8 @@ function falaoi(){
 }
 falaoi();// executando função.
 
+/**********************************************/
+
 // First-class objects (Objetos de primeira classe)
 // FUNCTION EXPRESSION 
 const souUmDado = function(){ // const recebe function anonima(sem nome) como dado.
@@ -12,17 +14,23 @@ const souUmDado = function(){ // const recebe function anonima(sem nome) como da
 }
 souUmDado();
 
+/**********************************************/
+
 function executaFuncao(funcao) { //jogando uma função dentro de outra para executar.
     console.log('Vou executar sua função abaixo:');
     funcao();
 }
 executaFuncao(souUmDado);// joguei a const da função anterior dentro ded outra função com outros parametros. 
 
+/**********************************************/
+
 // ARROW FUNCTION -> 
 const funcaoArrow = () => {
     console.log("Sou uma arrow function")
 };
 funcaoArrow();
+
+/**********************************************/
 
 // Função dentro de um objeto
 const obj = {
@@ -31,6 +39,8 @@ const obj = {
     }
 };
 obj.falar();
+
+/**********************************************/
 
 // Função dentro de um objeto sem a palavra function tambem funciona.
 const obj1 = {
