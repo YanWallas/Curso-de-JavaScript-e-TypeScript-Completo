@@ -1,18 +1,19 @@
-// MAP -> 
+// MAP -> invoca a função callback passada por argumento para cada elemento do Array e gera um novo Array com resultado alterado.
 
-// Dore os números
-//               0   1   2  3  4  5  6  7  8  9   10  11  12
+// Dobre os números
+//             0   1   2  3  4  5  6  7  8  9   10  11  12
 const numeros = [5, 50, 80, 1, 2, 3, 5, 8, 7, 11, 15, 22, 27];
 
-
+const numDobro = numeros.map(valor => valor *2);
+console.log(numDobro);
 
 /*********************************************************************/
 /*------------------------------------------------------------------*/
 
-
-// Retorne as pessoas que tem o nome com 5 letras ou mais
-// Retorne as pessoas com mais de 50 anos 
-// Retorne as pessoas cujo nome termina com 'a'
+//PARA CADA ELEMENTO:
+// Retorne apenas uma string com o nome da pessoa.
+// Remova apenas a chave 'nome' do objeto.
+// Adicione uma chave id em cada ojeto.
 
 const pessoas = [
     {nome: 'Luiz', idade: 62},
@@ -22,17 +23,19 @@ const pessoas = [
     {nome: 'Rosana', idade: 32},
     {nome: 'Wallas', idade: 47},
 ];
-// Retorne as pessoas que tem o nome com 5 letras ou mais
-const pessoasNomeG = pessoas.filter(obj => obj.nome.length >= 5);//length sempre chega o tamanho da string.
-console.log(pessoasNomeG);
 
-// Retorne as pessoas com mais de 50 anos
-const idadeMaior = pessoas.filter(valor => valor.idade > 50);
-console.log(idadeMaior);
+// Retorne apenas uma string com o nome da pessoa.
+const nome = pessoas.map(obj => obj.nome);
+console.log(nome);
 
-// Retorne as pessoas cujo nome termina com 'a'
-const nomeTerminaA = pessoas.filter(valor => valor.nome.toLowerCase().endsWith('a'));
-console.log(nomeTerminaA);
+// Remova apenas a chave 'nome' do objeto.
+const idade = pessoas.map(obj => ({idade: obj.idade}));//Preciso colocar '()' para proteger a função '{idade: obj.idade}' do return
+console.log(idade);
 
-//toLowerCase() -> retorna o valor da string que foi chamada convertida para minúsculo.
-//endsWith() -> indica que uma string termina com determinados caracteres, retornando true ou false.
+// Adicione uma chave id em cada ojeto.
+const adicID = pessoas.map((obj, indice) => {
+    const newObj = {...obj};//criando um novo objeto para nao mexer no original.
+    newObj.id = indice + 1;//adicionando o ID e colocando o numero do indice no ID.
+    return newObj;
+});
+console.log(adicID);
