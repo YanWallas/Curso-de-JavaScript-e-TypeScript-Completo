@@ -6,7 +6,8 @@ function Produto(nome, preco, estoque) {
     this.nome = nome;
     this.preco = preco;
 
-    Object.defineProperty(this, 'estoque', {
+    Object.defineProperty(this, 'estoque', { // Mexendo e apenas uma propriedade do objeto.
+
         enumerable: true, // True mostra a chave. false nao mostra a chave.
         value: estoque, // Valor da chave
         writable: false,// Se pode alterar o valor da chave.(true/false)
@@ -15,7 +16,8 @@ function Produto(nome, preco, estoque) {
         // value: function() { return estoque; }, -> podendo criar uma function no value.
     });
 
-    Object.defineProperties(this, {
+    Object.defineProperties(this, { // Mexendo em varia propriedades do objeto.
+
         nome: {
         enumerable: true, // True mostra a chave. false nao mostra a chave.
         value: nome, // Valor da chave
