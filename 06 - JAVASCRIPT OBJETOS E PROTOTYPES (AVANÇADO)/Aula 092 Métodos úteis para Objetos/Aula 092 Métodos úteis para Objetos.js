@@ -8,6 +8,7 @@ Object.getOwnPropertyDescriptor(o, 'prop')
 // Já vimos 
 Object.keys (retirna as chaves)
 Object.freeze (Congela o objeto)
+Object.defineProperties (define várias propriedades)
 Object.defineProperty (define uma propriedade)
 */
 
