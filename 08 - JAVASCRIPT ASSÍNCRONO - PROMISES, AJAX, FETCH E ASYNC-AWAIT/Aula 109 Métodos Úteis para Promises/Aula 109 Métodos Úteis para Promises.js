@@ -62,3 +62,17 @@ Promise.race(promises)
     .catch(function(erro1) {
         console.log(erro1);
     });
+
+function baixaPag() {
+    const emCache = true;
+
+    if(emCache){
+        return Promise.resolve('Página em cache.');
+    } else {
+        return esperaAi('Baixei a página', 3000);
+    }
+}
+
+baixaPag()
+    .then(dadosPagina => {console.log(dadosPagina);})
+    .catch(e => console.log(e));
