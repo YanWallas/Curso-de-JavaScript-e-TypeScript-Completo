@@ -1,6 +1,11 @@
+/* -> FORMA PARA BUSCAR OS DADOS DAS PESSOAS.JSON
 fetch('pessoas.json')// Buscar os dados desse json.
   .then(resposta => resposta.json())
-  .then(json => carregaElementos(json));
+  .then(json => carregaElementos(json));*/
+
+// -> USANDO AXIOS E TIRANDO O DE CIMA, PQ JA TEM LINCADO O METODO NO HTML ANTES DO SCRIPT.
+axios('pessoas.json')
+  .then(resposta => carregaElementos(resposta.data));
 
 function carregaElementos(json) {
   const table = document.createElement('table');
