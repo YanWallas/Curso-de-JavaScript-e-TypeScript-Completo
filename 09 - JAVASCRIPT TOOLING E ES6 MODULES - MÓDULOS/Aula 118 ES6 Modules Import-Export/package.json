@@ -1,10 +1,10 @@
 {
-  "name": "aula-117-correcao-core-js-de-v2-para-v3",
+  "name": "aula-118",
   "version": "1.0.0",
   "description": "",
   "main": "index.js",
   "scripts": {
-    "gera": "webpack -w"
+    "dev": "webpack -w"
   },
   "keywords": [],
   "author": "",
