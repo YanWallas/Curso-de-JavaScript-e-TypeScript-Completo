@@ -7,6 +7,7 @@ console.log(falaNome());
 
 //OUTRA MANEIRA DE IMPORTA SEPARADAMENTE CADA COISA.
 const path = require('path');
+const axios = require('axios');
 
 
 const { nome, sobrenome, falaNome, Pessoa } = require('./mod1.js');
@@ -16,3 +17,9 @@ console.log(falaNome());
 
 const p1 = new Pessoa('Wallas');
 console.log(p1);
+
+/*
+axios('http://www.otaviomiranda.com.br/files/json/pessoas.json')
+    .then(response => console.log(response.data))
+    .catch(e => console.log(e));*/
+

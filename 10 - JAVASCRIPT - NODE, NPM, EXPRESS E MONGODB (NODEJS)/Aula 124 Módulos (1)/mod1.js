@@ -22,3 +22,9 @@ class Pessoa {
     }
 }
 exports.Pessoa = Pessoa;
+
+// OUTRA MANEIRA DE EXPORTA DE UM VEZ SÓ
+module.exports = {
+    nome, sobrenome, Pessoa
+};
+//NÃO FUNCIONA APENAS COM EXPORTS, TEM QUE COLOCAR MODULE ANTES.
