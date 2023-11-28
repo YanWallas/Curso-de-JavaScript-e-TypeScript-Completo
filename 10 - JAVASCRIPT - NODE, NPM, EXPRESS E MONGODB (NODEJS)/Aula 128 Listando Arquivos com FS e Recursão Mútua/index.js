@@ -12,7 +12,7 @@ const path = require('path');// Tratar dos caminhos.
 async function readdir(rootDir) {//vai delegar um serviço para function de baixo.
     rootDir = rootDir || path.resolve(__dirname);
     const files = await fs.readdir(rootDir);// Jogando o conteúdo na const.
-    walk(files);//Jogando os arquivos na function walk.
+    walk(files, rootDir);//Jogando os arquivos na function walk.
 }
 
 async function walk(files, rootDir) {
@@ -23,4 +23,4 @@ async function walk(files, rootDir) {
     }
 }
 
-readdir();
+readdir('D:/Documentos/GitHub/Curso-de-JavaScript-e-TypeScript-Completo');
