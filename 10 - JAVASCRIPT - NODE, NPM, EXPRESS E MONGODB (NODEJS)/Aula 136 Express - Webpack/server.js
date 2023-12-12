@@ -14,6 +14,6 @@ app.set('view engine', 'ejs');
 app.use(routes);//Usa minhas rotas.
 
 app.listen(3000, () => {
-    console.log('Acessar http://localhost:3000');
+    console.log('Acessar http://localhost:3000');//3000 e o número da porta do servior.
     console.log('Servidor executando na porta 300');
 });// selecionando a porta do servidor.
