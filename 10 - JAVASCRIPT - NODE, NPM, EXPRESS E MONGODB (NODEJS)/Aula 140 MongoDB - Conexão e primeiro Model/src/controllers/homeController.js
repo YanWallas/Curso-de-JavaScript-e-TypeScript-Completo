@@ -1,12 +1,21 @@
 //FUNCTION DE TRATAMENTO.
 
-exports.paginaInicial = (req, res, next) => {//Caminho
-    console.log('Respondendo ao cliente');
+const HomeModel = require('../models/HomeModel');
+
+//HomeModel.find() -> para ver os dados.
+HomeModel.create({// -> para criar os dados.
+    titulo: 'Um título de testes',
+    descricao: 'Uma descrição de testes.'
+})
+    .then(dados => console.log(dados))
+    .catch(e => console.error(e))
+
+exports.paginaInicial = (req, res) => {//Caminho
     res.render('index');// vai renderizar o index dentro da pasta views.
-    console.log(`'PaginaInicial' Olha o que tem na req.session.nome: ${req.session.nome}`);
-    next();
+    return;
 };
 
 exports.trataPost = (req, res, next) => {
     res.send(req.body);// rota do views.
+    return;
 };

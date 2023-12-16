@@ -1,16 +1,11 @@
-require('dotenv').config();
+require('dotenv').config();//Config para linkar banco de dados(puxando do arquivo env no corpo do projeto).
 
 const express = require('express');
 const app = express();
 const mongoose = require('mongoose');//puxando banco de dados
 
-const connectionsString = 'mongodb+srv://yanwallas:yan0108wallas@cursojs.hmzx7zd.mongodb.net/?retryWrites=true&w=majority';
-
-//mongoose.connect(connectionsString, { useNewUrlParser: true, useUnifiedTopology: true } -> Caso apareca mensagem no banco de dados, utilizar o que esta dentro de {}.
-
-mongoose.connect(connectionsString) //caso de mensagem no banco de dados, coloque { useNewUrlParser: true, useUnifiedTopology: true }.
+mongoose.connect(process.env.CONNECTIONSTRING) //conectando ao servidor 
     .then(() => {
-        console.log('Conectei á base de dados.');
         app.emit('Pronto');//Para emitir o sinal do Bando de dados conectado.
     })
     .catch(e => console.log(e));
