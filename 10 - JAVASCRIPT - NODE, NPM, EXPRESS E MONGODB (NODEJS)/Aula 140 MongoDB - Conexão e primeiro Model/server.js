@@ -4,7 +4,7 @@ const express = require('express');
 const app = express();
 const mongoose = require('mongoose');//puxando banco de dados
 
-mongoose.connect(process.env.CONNECTIONSTRING) //conectando ao servidor 
+mongoose.connect(process.env.CONNECTIONSTRING) //conectando ao servidor(link do servidor no arquivo env)
     .then(() => {
         app.emit('Pronto');//Para emitir o sinal do Bando de dados conectado.
     })
