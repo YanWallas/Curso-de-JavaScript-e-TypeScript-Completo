@@ -1,4 +1,0 @@
-
--> Link de Conexao com banco de dados mongoDB
-
-mongodb+srv://yanwallas:<password>@cursojs.hmzx7zd.mongodb.net/?retryWrites=true&w=majority
