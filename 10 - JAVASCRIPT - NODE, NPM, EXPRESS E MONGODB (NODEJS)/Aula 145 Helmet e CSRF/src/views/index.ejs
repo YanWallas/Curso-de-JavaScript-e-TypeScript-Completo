@@ -26,6 +26,7 @@
         <h3><%= umaVariavelLocal %></h3><!--vai aparecer em todos os locais (middlewares nao foi definido a rota)-->
 
         <form action="/" method="post">
+            <input type="hidden" name="_csrf" value="<%= csrfToken %>">
             <label>Cliente</label>
             <input type="text" name="cliente">
             <button>Submit</button>
