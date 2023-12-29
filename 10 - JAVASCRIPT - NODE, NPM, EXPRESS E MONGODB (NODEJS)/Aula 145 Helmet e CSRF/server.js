@@ -16,9 +16,12 @@ const flash = require('connect-flash');
 
 const routes = require('./routes');
 const path = require('path');
-const { middlewareGlobal } = require('./src/middlewares/middleware');
+const helmet = require('helmet');
+const csrf = require('csrf');
+const { middlewareGlobal, checkCsrfError, csrfMiddleware } = require('./src/middlewares/middleware');
 
 //FUCNTION A BAIXO PARA TRATAR O BODY
+app.use(helmet());
 app.use(express.urlencoded({ extended: true }));//function que recebe um obj extended, dentro de uma function urlencoded(), que esta dentro de uma function Use().
 
 app.use(express.static(path.resolve(__dirname, 'public')));
@@ -39,8 +42,11 @@ app.use(flash());
 app.set('views', path.resolve(__dirname, 'src', 'views'));//Lincando a pasta views que esta dentro de src.
 app.set('view engine', 'ejs');
 
+app.use(csrf());
 //-> NOSSOS PRÓPRIOS MIDDLEWARES
 app.use(middlewareGlobal);//vai passar por todos os middlewares.
+app.use(checkCsrfError);//
+app.use(csrfMiddleware);
 app.use(routes);//Usa minhas rotas.
 
 app.on('Pronto', () => { //So vai conectar no servidor, depois que estiver pronto. 
