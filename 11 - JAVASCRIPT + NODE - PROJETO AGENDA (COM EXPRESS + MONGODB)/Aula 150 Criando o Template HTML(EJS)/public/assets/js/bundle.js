@@ -20,67 +20,8 @@ __webpack_require__.r(__webpack_exports__);
 
 
 var ___CSS_LOADER_EXPORT___ = _node_modules_css_loader_dist_runtime_api_js__WEBPACK_IMPORTED_MODULE_1___default()((_node_modules_css_loader_dist_runtime_sourceMaps_js__WEBPACK_IMPORTED_MODULE_0___default()));
-___CSS_LOADER_EXPORT___.push([module.id, "@import url(https://fonts.googleapis.com/css?family=Open+Sans:400,700&display=swap);"]);
 // Module
-___CSS_LOADER_EXPORT___.push([module.id, `:root {
-  --primary-color: rgb(17, 86, 102);
-  --primary-color-darker: rgb(9, 48, 56);
-}
-
-* {
-  box-sizing: border-box;
-  outline: 0;
-}
-
-body {
-  margin: 0;
-  padding: 0;
-  background: var(--primary-color);
-  font-family: 'Open sans', sans-serif;
-  font-size: 1.3em;
-  line-height: 1.5em;
-}
-
-.container {
-  max-width: 640px;
-  margin: 50px auto;
-  background: #fff;
-  padding: 20px;
-  border-radius: 10px;
-}
-
-form input, form label, form button {
-  display: block;
-  width: 100%;
-  margin-bottom: 10px;
-}
-
-form input {
-  font-size: 24px;
-  height: 50px;
-  padding: 0 20px;
-}
-
-form input:focus {
-  outline: 1px solid var(--primary-color);
-}
-
-form button {
-  border: none;
-  background: var(--primary-color);
-  color: #fff;
-  font-size: 18px;
-  font-weight: 700;
-  height: 50px;
-  cursor: pointer;
-  margin-top: 30px;
-}
-
-form button:hover {
-  background: var(--primary-color-darker);
-}
-
-`, "",{"version":3,"sources":["webpack://./frontend/assets/css/style.css"],"names":[],"mappings":"AACA;EACE,iCAAiC;EACjC,sCAAsC;AACxC;;AAEA;EACE,sBAAsB;EACtB,UAAU;AACZ;;AAEA;EACE,SAAS;EACT,UAAU;EACV,gCAAgC;EAChC,oCAAoC;EACpC,gBAAgB;EAChB,kBAAkB;AACpB;;AAEA;EACE,gBAAgB;EAChB,iBAAiB;EACjB,gBAAgB;EAChB,aAAa;EACb,mBAAmB;AACrB;;AAEA;EACE,cAAc;EACd,WAAW;EACX,mBAAmB;AACrB;;AAEA;EACE,eAAe;EACf,YAAY;EACZ,eAAe;AACjB;;AAEA;EACE,uCAAuC;AACzC;;AAEA;EACE,YAAY;EACZ,gCAAgC;EAChC,WAAW;EACX,eAAe;EACf,gBAAgB;EAChB,YAAY;EACZ,eAAe;EACf,gBAAgB;AAClB;;AAEA;EACE,uCAAuC;AACzC","sourcesContent":["@import url('https://fonts.googleapis.com/css?family=Open+Sans:400,700&display=swap');\r\n:root {\r\n  --primary-color: rgb(17, 86, 102);\r\n  --primary-color-darker: rgb(9, 48, 56);\r\n}\r\n\r\n* {\r\n  box-sizing: border-box;\r\n  outline: 0;\r\n}\r\n\r\nbody {\r\n  margin: 0;\r\n  padding: 0;\r\n  background: var(--primary-color);\r\n  font-family: 'Open sans', sans-serif;\r\n  font-size: 1.3em;\r\n  line-height: 1.5em;\r\n}\r\n\r\n.container {\r\n  max-width: 640px;\r\n  margin: 50px auto;\r\n  background: #fff;\r\n  padding: 20px;\r\n  border-radius: 10px;\r\n}\r\n\r\nform input, form label, form button {\r\n  display: block;\r\n  width: 100%;\r\n  margin-bottom: 10px;\r\n}\r\n\r\nform input {\r\n  font-size: 24px;\r\n  height: 50px;\r\n  padding: 0 20px;\r\n}\r\n\r\nform input:focus {\r\n  outline: 1px solid var(--primary-color);\r\n}\r\n\r\nform button {\r\n  border: none;\r\n  background: var(--primary-color);\r\n  color: #fff;\r\n  font-size: 18px;\r\n  font-weight: 700;\r\n  height: 50px;\r\n  cursor: pointer;\r\n  margin-top: 30px;\r\n}\r\n\r\nform button:hover {\r\n  background: var(--primary-color-darker);\r\n}\r\n\r\n"],"sourceRoot":""}]);
+___CSS_LOADER_EXPORT___.push([module.id, ``, "",{"version":3,"sources":[],"names":[],"mappings":"","sourceRoot":""}]);
 // Exports
 /* harmony default export */ const __WEBPACK_DEFAULT_EXPORT__ = (___CSS_LOADER_EXPORT___);
 
