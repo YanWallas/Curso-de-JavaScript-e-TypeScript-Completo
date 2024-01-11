@@ -4,8 +4,8 @@ const mongoose = require('mongoose');
 OBS: Se nao tratar, mongoDB salva os dados de qualquer jeito.*/
 
 const HomeSchema = new mongoose.Schema({
-    titulo: { type: String, requerid: true },
-    descricao: String
+  titulo: { type: String, requerid: true },
+  descricao: String
 });
 
 const HomeModel = mongoose.model('Home', HomeSchema);

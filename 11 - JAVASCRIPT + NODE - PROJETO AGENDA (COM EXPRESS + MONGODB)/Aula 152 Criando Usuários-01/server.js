@@ -5,10 +5,10 @@ const app = express();
 const mongoose = require('mongoose');//puxando banco de dados
 
 mongoose.connect(process.env.CONNECTIONSTRING) //conectando ao servidor(link do servidor no arquivo env)
-    .then(() => {
-        app.emit('Pronto');//Para emitir o sinal do Bando de dados conectado.
-    })
-    .catch(e => console.log(e));
+  .then(() => {
+    app.emit('Pronto');//Para emitir o sinal do Bando de dados conectado.
+  })
+  .catch(e => console.log(e));
 
 const session = require('express-session');//identificar navegador de cliente(salva um cookie de id)
 const MongoStore = require('connect-mongo');//Salva session na base de dados.
@@ -27,14 +27,14 @@ app.use(express.json());
 app.use(express.static(path.resolve(__dirname, 'public')));//Arquivo static.
 
 const sessionOptions = session({
-    secret: 'Coloca qualquer coisa',
-    store: MongoStore.create({ mongoUrl: process.env.CONNECTIONSTRING }),
-    resave: false,
-    saveUninitialized: false,
-    cookie: {
-        maxAge: 1000 * 60 * 60 * 24 * 7, //maximo de tempo (7 dias) contando em millesegundos.
-        httpOnly: true
-    }
+  secret: 'Coloca qualquer coisa',
+  store: MongoStore.create({ mongoUrl: process.env.CONNECTIONSTRING }),
+  resave: false,
+  saveUninitialized: false,
+  cookie: {
+    maxAge: 1000 * 60 * 60 * 24 * 7, //maximo de tempo (7 dias) contando em millesegundos.
+    httpOnly: true
+  }
 });
 app.use(sessionOptions);
 app.use(flash());
@@ -51,9 +51,9 @@ app.use(csrfMiddleware);
 app.use(routes);//Usa minhas rotas.
 
 app.on('Pronto', () => { //So vai conectar no servidor, depois que estiver pronto. 
-    app.listen(3000, () => {
-        console.log('Acessar http://localhost:3000');//3000 e o número da porta do servior.
-        console.log('Servidor executando na porta 300');
-    });// selecionando a porta do servidor.
+  app.listen(3000, () => {
+    console.log('Acessar http://localhost:3000');//3000 e o número da porta do servior.
+    console.log('Servidor executando na porta 300');
+  });// selecionando a porta do servidor.
 });
 
