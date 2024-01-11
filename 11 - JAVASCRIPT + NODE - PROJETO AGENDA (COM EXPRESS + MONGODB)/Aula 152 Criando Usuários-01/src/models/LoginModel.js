@@ -6,7 +6,7 @@ OBS: Se nao tratar, mongoDB salva os dados de qualquer jeito.*/
 
 const LoginSchema = new mongoose.Schema({
   email: { type: String, requerid: true },
-  password: { type: String, requerid: true },
+  password: { type: String, requerid: true }
 });
 
 const LoginModel = mongoose.model('Login', LoginSchema);
