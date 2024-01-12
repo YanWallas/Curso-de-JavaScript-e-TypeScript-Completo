@@ -1,5 +1,6 @@
 const mongoose = require('mongoose');
-const validator = require('validator');
+const validator = require('validator');// Validador de email.
+const bcryptjs = require('bcryptjs');//Proteção de senha no servidor
 
 /*TRATAMENTO DOS DADOS QUE VAO SER SALVO NO BANCO DE DADOS MONGO.
 OBS: Se nao tratar, mongoDB salva os dados de qualquer jeito.*/
@@ -20,13 +21,26 @@ class Login {
 
   async register() {
     this.valida();
-    if(this.errors.length > 0) return; //Se meu array nao estiver vazio. 
+    if(this.errors.length > 0) return; //Se meu array nao estiver vazio.  
+
+    await this.userExists();//Function para verificar se usuário ja foi cadastrado.
+
+    if(this.errors.length > 0) return; //verificar de novo depois.
+
+    const salt = bcryptjs.genSaltSync();// Vai gerar uma senha diferente no servidor.
+    this.body.password = bcryptjs.hashSync(this.body.password, salt);
 
     try {
       this.user = await LoginModel.create(this.body);
     } catch(e) {
       console.log(e);
     }
+  }
+
+  async userExists() {
+    const user = await LoginModel.findOne({ email: this.body.email});//Verificar se ja tem um email cadastrado no banco de dados.
+
+    if(user) this.errors.push('Usuário já existe.');//Se ja tiver email cadastrado, aparecera essa mensagem na tela.
   }
 
   valida() {
