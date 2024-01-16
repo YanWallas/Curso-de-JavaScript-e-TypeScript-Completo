@@ -1,6 +1,7 @@
 exports.middlewareGlobal = (req, res, next) => {
   res.locals.errors = req.flash('errors');//Se resposta do local erro, der erro, coloca o flash(msg) para executar.
   res.locals.success = req.flash('success');
+  res.locals.user = req.session.user;
   next();
 };
 

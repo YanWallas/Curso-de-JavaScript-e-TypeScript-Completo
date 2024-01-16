@@ -14,5 +14,8 @@ route.get('/login/index', loginController.index);//rota que importa o arquivo do
 
 route.post('/login/register', loginController.register);//rota que importa o arquivo do loginController, diretamente da function register.
 
+route.post('/login/login', loginController.login);//rota que importa o arquivo do loginController, diretamente da function login.
+
+route.get('/login/logout', loginController.logout);//Rota para sair
 
 module.exports = route;//Exportando as informações dos modelos routes.

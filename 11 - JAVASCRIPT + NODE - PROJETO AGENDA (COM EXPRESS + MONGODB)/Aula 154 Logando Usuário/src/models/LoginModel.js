@@ -19,6 +19,24 @@ class Login {
     this.user = null;
   }
 
+  async login() {
+    this.valida();
+    if(this.errors.length > 0) return; //Se meu array nao estiver vazio. 
+    this.user = await LoginModel.findOne({ email: this.body.email});//Verificar se ja tem um email cadastrado no banco de dados.   
+
+    if(!this.user) {//Se User nao existir.
+      this.errors.push('Usuário não existe.');//adiciona em errors
+      return;
+    }
+
+    //Se comparar senha digitada com senha do banco de dados, der false.
+    if(!bcryptjs.compareSync(this.body.password, this.user.password)) {
+      this.errors.push('Senha inválida');//adiciona em errors
+      this.user = null;
+      return;
+    }
+  }
+
   async register() {
     this.valida();
     if(this.errors.length > 0) return; //Se meu array nao estiver vazio.  
@@ -35,9 +53,9 @@ class Login {
   }
 
   async userExists() {
-    const user = await LoginModel.findOne({ email: this.body.email});//Verificar se ja tem um email cadastrado no banco de dados.
+    this.user = await LoginModel.findOne({ email: this.body.email});//Verificar se ja tem um email cadastrado no banco de dados.
 
-    if(user) this.errors.push('Usuário já existe.');//Se ja tiver email cadastrado, aparecera essa mensagem na tela.
+    if(this.user) this.errors.push('Usuário já existe.');//Se ja tiver email cadastrado, aparecera essa mensagem na tela.
   }
 
   valida() {
