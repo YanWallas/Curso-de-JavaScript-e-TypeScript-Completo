@@ -9,19 +9,19 @@
     <div class="collapse navbar-collapse" id="navbarSupportedContent">
       <ul class="navbar-nav ml-auto mb-2 mb-lg-0">
 
+        <li class="nav-item">
+          <a class="nav-link" href="/contato/index">Cadastar contato</a><!--Link lado direiro-->
+        </li>
+
         <% if(user) { %>
           <li class="nav-item">
-            <a class="nav-link" href="login/logout">Sair</a> <!--Link lado direito (para entrar na pagina de login)-->
+            <a class="nav-link" href="/login/logout">Sair</a> <!--Link lado direito (para entrar na pagina de login)-->
           </li>
         <% } else { %>
           <li class="nav-item">
             <a class="nav-link" href="login/index">Entrar</a> <!--Link lado direito (para entrar na pagina de login)-->
           </li>
-          <% } %>
-
-        <li class="nav-item">
-          <a class="nav-link" href="#">Link</a><!--Link lado direiro-->
-        </li>
+        <% } %>
 
       </ul>
     </div>

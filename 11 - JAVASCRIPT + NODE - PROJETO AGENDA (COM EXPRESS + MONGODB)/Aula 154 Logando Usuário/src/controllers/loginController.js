@@ -2,7 +2,7 @@ const Login = require('../models/LoginModel');//Importando as informações do a
 
 exports.index = (req, res) => {//Exportando a function index.
   if(req.session.user) return res.render('login-logado');//Se tiver logado, vai renderizar login-logado.
-  res.render('login'); //Redirecionando para pagina de login.(views)
+  return res.render('login'); //Redirecionando para pagina de login.(views)
 }
 
 exports.register = async function (req, res) {// Expostando a function register
