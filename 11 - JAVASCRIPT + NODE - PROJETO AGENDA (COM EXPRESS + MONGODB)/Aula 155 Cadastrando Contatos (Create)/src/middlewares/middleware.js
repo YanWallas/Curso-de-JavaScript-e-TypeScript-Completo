@@ -22,3 +22,13 @@ exports.csrfMiddleware = (req, res, next) => {//Exportando uma função que veri
   res.locals.csrfToken = req.csrfToken();
   next();
 };
+
+exports.loginRequired = (req, res, next) => {//Função para nao acessar cadastro de contato sem estar logado.
+  if(!req.session.user) { //Se nao tiver session logado
+    req.flash('errors', 'Você precsa fazer login.');//Aparecerá essa mensagem.
+    req.session.save(() => res.redirect('/'));//Pagina será salva e redirecionada para home.
+    return;
+  }
+
+  next();
+};

@@ -4,6 +4,8 @@ const homeController = require('./src/controllers/homeController');//importando 
 const loginController = require('./src/controllers/loginController');
 const contatoController = require('./src/controllers/contatoController');
 
+const { loginRequired } = require('./src/middlewares/middleware');
+
 
 // Route -> VAI TRATAR DAS ROTAS
 
@@ -20,6 +22,9 @@ route.post('/login/login', loginController.login);//rota que importa o arquivo d
 route.get('/login/logout', loginController.logout);//Rota para sair
 
 // Rotas de contato
-route.get('/contato/index', contatoController.index);
+route.get('/contato/index', loginRequired, contatoController.index);//Antes de acessar a rota, vai passar pelo middleware primeiro para verificar se user esta logado.
+
+route.post('/contato/register', loginRequired, contatoController.register);
 
 module.exports = route;//Exportando as informações dos modelos routes.
+
