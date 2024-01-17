@@ -25,6 +25,7 @@ route.get('/login/logout', loginController.logout);//Rota para sair
 route.get('/contato/index', loginRequired, contatoController.index);//Antes de acessar a rota, vai passar pelo middleware primeiro para verificar se user esta logado.
 
 route.post('/contato/register', loginRequired, contatoController.register);
+route.get('/contato/index/:id', loginRequired, contatoController.editIndex);
 
 module.exports = route;//Exportando as informações dos modelos routes.
 
