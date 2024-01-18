@@ -22,6 +22,7 @@ const { middlewareGlobal, checkCsrfError, csrfMiddleware } = require('./src/midd
 
 //FUCNTION A BAIXO PARA TRATAR O BODY
 app.use(helmet());
+app.use(helmet.referrerPolicy({policy: ["origin", "unsafe-url"]}));
 app.use(express.urlencoded({ extended: true }));//function que recebe um obj extended, dentro de uma function urlencoded(), que esta dentro de uma function Use().
 app.use(express.json());
 app.use(express.static(path.resolve(__dirname, 'public')));//Arquivo static.

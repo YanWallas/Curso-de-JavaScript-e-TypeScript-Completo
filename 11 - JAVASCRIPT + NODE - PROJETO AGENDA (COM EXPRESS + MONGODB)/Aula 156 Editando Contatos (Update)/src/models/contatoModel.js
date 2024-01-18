@@ -62,4 +62,11 @@ Contato.prototype.cleanUp = function() {
   };
 };
 
+Contato.prototype.edit = async function(id) {
+  if(typeof id !== 'string') return;//Se id nao for uma string, retorne.
+  this.valida();// chamando o valida.
+  if(this.errors.length > 0) return;//Se tiver errors, retorna.
+  this.contato = await ContatoModel.findByIdAndUpdate(id, this.body, { new: true });//Encontrando o contato por id, e atualizando seus dados.
+};
+
 module.exports = Contato;

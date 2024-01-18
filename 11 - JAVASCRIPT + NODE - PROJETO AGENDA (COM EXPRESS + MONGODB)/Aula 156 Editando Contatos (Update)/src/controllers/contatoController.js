@@ -34,3 +34,24 @@ exports.editIndex = async function(req, res) {
 
   res.render('contato', { contato });
 };
+
+exports.edit = async function(req, res) {
+  try {
+    if(!req.params.id)  return res.render('404');
+    const contato = new Contato(req.body);
+    await contato.edit(req.params.id);
+
+    if(contato.errors.length > 0) {
+      req.flash('errors', contato.errors);//Aparecerá essa mensagem.
+      req.session.save(() => res.redirect(`/contato/index/${req.params.id}`));
+      return;
+    }
+
+    req.flash('success', 'Contato editado com sucesso.');//Aparecerá essa mensagem.
+    req.session.save(() => res.redirect(`/contato/index/${req.params.id}`));
+    return;
+  } catch (e) {
+    console.log(e);
+  return res.render('404');
+  }
+};
