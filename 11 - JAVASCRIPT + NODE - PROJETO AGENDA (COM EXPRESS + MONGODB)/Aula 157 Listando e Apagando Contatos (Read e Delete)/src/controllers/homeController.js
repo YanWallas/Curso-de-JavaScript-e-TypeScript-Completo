@@ -1,6 +1,9 @@
 //FUNCTION DE TRATAMENTO.
 
-exports.index = (req, res) => {//Caminho
-  res.render('index');// vai renderizar o index dentro da pasta views.
+const Contato = require('../models/contatoModel');
+
+exports.index = async (req, res) => {//Caminho
+  const contatos = await Contato.buscaContatos();
+  res.render('index', { contatos });// vai renderizar o index dentro da pasta views.
 
 };
