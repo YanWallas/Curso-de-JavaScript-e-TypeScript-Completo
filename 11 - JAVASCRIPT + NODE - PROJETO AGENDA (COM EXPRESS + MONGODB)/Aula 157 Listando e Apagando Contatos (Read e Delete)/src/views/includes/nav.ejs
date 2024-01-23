@@ -1,0 +1,29 @@
+<nav class="navbar navbar-expand-lg navbar-dark bg-dark"><!--Barra de cima-->
+  <div class="container-fluid">
+    <a class="navbar-brand" href="/">Agenda</a><!--Link lado esquedo-->
+
+    <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
+      <span class="navbar-toggler-icon"></span>
+    </button>
+
+    <div class="collapse navbar-collapse" id="navbarSupportedContent">
+      <ul class="navbar-nav ml-auto mb-2 mb-lg-0">
+
+        <li class="nav-item">
+          <a class="nav-link" href="/contato/index">Cadastar contato</a><!--Link lado direiro-->
+        </li>
+
+        <% if(user) { %>
+          <li class="nav-item">
+            <a class="nav-link" href="/login/logout">Sair</a> <!--Link lado direito (para entrar na pagina de login)-->
+          </li>
+        <% } else { %>
+          <li class="nav-item">
+            <a class="nav-link" href="login/index">Entrar</a> <!--Link lado direito (para entrar na pagina de login)-->
+          </li>
+        <% } %>
+
+      </ul>
+    </div>
+  </div>
+</nav>
