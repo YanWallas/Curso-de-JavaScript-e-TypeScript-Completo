@@ -1,6 +1,6 @@
 //FUNCTION DE TRATAMENTO.
 
-const Contato = require('../models/contatoModel');
+const Contato = require('../models/ContatoModel');
 
 exports.index = async (req, res) => {//Caminho
   const contatos = await Contato.buscaContatos();

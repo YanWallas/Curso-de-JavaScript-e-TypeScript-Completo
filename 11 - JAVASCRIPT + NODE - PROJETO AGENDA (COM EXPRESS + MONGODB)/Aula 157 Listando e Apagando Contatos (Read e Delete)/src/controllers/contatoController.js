@@ -1,4 +1,4 @@
-const Contato = require('../models/contatoModel');//Importando as informações do arquivo LoginModel.
+const Contato = require('../models/ContatoModel');//Importando as informações do arquivo LoginModel.
 
 exports.index = (req, res) => {
   res.render('contato', {

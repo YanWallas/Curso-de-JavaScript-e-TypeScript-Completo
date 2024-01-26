@@ -72,7 +72,6 @@ Contato.buscaPorId = async function(id) {
 };
 
 Contato.buscaContatos = async function() {
-  if(typeof id !== 'string') return;
   const contatos = await ContatoModel.find()
     .sort({ CriadoEm: -1 });
   return contatos;
