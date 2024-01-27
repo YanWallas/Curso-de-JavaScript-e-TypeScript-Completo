@@ -11,7 +11,7 @@ export default class Login {
   }
 
   events() {
-    if(!this.form) return;
+    if(!this.form) return;// se nao tiver form, return
     this.form.addEventListener('submit', e => {
       e.preventDefault();
       this.validate(e);

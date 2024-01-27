@@ -3,13 +3,17 @@ import 'regenerator-runtime/runtime';
 
 //VALIDANDO FRONTEND
 
-//VALIDANDO FORMULÁRIO
-import Login from './modules/Login';
+//VALIDANDO FORMULÁRIO LOGIN/CADASTRO.
+import Login from './modules/Login'; //Importando função Login do arquivo login.
 
-const login = new Login('.form-login');
+import Contato from './modules/contato'; 
+
+const login = new Login('.form-login');//jogando a class da função na const.
 const cadastro = new Login('.form-cadastro');
-login.init();
+login.init(); // iniciando a const.
 cadastro.init();
 
-//import './assets/css/style.css';   
+const contato = new Contato('.form-contato');
+contato.init(); // iniciando a const.
 
+//import './assets/css/style.css';   
