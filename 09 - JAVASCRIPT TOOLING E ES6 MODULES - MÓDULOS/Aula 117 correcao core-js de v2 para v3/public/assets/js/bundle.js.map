@@ -1,1 +1,0 @@
-{"version":3,"file":"bundle.js","mappings":";;;;;AAAA;AACA;AACA;AACAA,KAAK,CAAC,YAAY,CAAC;AACnBC,OAAO,CAACC,GAAG,CAAC,WAAW,CAAC,C","sources":["webpack://aula-117-correcao-core-js-de-v2-para-v3/./src/index.js"],"sourcesContent":["//1\r\n//2\r\n//3\r\nalert('Olá Mundo!')\r\nconsole.log('Olá Mundo')"],"names":["alert","console","log"],"sourceRoot":""}
